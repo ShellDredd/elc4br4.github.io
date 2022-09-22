@@ -18,6 +18,3 @@ Perfil-HackTheBox:
 [![HTBadge](https://www.hackthebox.eu/badge/image/533771)](https://www.hackthebox.com/home/users/profile/533771)
 
 
-Perfil-TryHackMe:
-
-<script src="https://tryhackme.com/badge/512515"></script>
