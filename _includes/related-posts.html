@@ -1,0 +1,54 @@
+<!-- Related Posts
+================================================== -->
+<div class="{% unless page.categories == empty %} related-posts {% endunless %}">  
+
+    {% unless page.categories == empty %}
+    <h2 class="text-center mb-4">Posts relacionados.</h2>
+    {% endunless %}
+    
+    <div class="d-flex justify-content-center align-items-center">
+
+    <!-- Tags -->  
+    {% assign sortedTags = page.tags | sort %}
+    {% for tag in sortedTags %}                
+    <a class="smoothscroll badge badge-primary" href="{{site.baseurl}}/tags#{{ tag | replace: " ","-" }}">{{ tag }}</a>               
+    {% endfor %}
+    
+    <!-- Categories -->
+    {% assign sortedCategories = page.categories | sort %}
+    {% for category in sortedCategories %}
+    <a class="smoothscroll badge badge-primary" href="{{site.baseurl}}/categories#{{ category | replace: " ","-" }}">{{ category }}</a>                
+    {% endfor %}
+
+    </div>
+
+    {% assign maxRelated = 3 %}
+    {% assign minCommonTags =  1 %}
+    {% assign maxRelatedCounter = 0 %}
+    <div class="blog-grid-container">
+        {% for post in site.posts %}
+        
+            {% assign sameTagCount = 0 %}
+            {% assign commonTags = '' %}
+        
+            {% for tag in post.tags %}
+            {% if post.url != page.url %}
+                {% if page.tags contains tag %}
+                {% assign sameTagCount = sameTagCount | plus: 1 %}
+                {% capture tagmarkup %} {{ tag }} {% endcapture %}
+                {% assign commonTags = commonTags | append: tagmarkup %}
+                {% endif %}
+            {% endif %}
+            {% endfor %}
+        
+            {% if sameTagCount >= minCommonTags %}
+            {% include postbox.html %}
+            {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+            {% if maxRelatedCounter >= maxRelated %}
+                {% break %}
+            {% endif %}
+            {% endif %}
+        
+        {% endfor %}
+        </div>        
+</div>
