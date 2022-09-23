@@ -5,6 +5,6 @@ User-agent: *
 Allow: /
 
 
-Sitemap: http://localhost:4000/sitemap.xml
+Sitemap: http://elc4br4.github.io:4000/sitemap.xml
 
  
