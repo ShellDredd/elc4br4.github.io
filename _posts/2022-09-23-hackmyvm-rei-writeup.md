@@ -149,7 +149,7 @@ Lanzo linpeas.sh pero no veo nada raro... asique paso a lanzar pspy para buscar 
 
 Y encuentro lo siguiente
 
->2022/09/22 12:51:29 CMD: UID=0    PID=10752  | (kanga.sh)
+>2022/09/22 12:51:29 CMD: UID=0    PID=10752   (kanga.sh)
 
 Procedo a buscar el archivo...
 
