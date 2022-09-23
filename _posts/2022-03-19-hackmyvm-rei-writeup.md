@@ -7,8 +7,7 @@ category    : [ HackMyVM ]
 tags        : [ Linux ]
 ---
 
-![](/assets/images/HMV/Rei-HackMyVM/karate1.gif)
-
+En esta ocasión tenemos una máquina nivel Easy creada por Shelldredd, tendremos varios trolleos a lo largo de la explotación y debemos fijarnos y prestar atención a todo.
 
 # Reconocimiento de Puertos
 
@@ -111,6 +110,8 @@ Pero hay que fijarse en todo, ya que la foto nos da varios datos interesantes...
 > Chuck Norris is the user master
 
 Podríamos estar ante un usuario y una posible contraseña... Asique porque no probar?
+
+![](/assets/images/HMV/Rei-HackMyVM/karate1.gif)
 
 # SSH 
 
