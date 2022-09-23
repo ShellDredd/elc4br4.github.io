@@ -147,7 +147,7 @@ Flag User:
 
 # Escalada de Privilegios
 
-Ahora toca escalar privilegios, y como siempre comenzamos enumerando vectores de escalada.
+Ahora toca escalar privilegios, y como siempre comenzamos enumerando para encontrar posibles vectores de escalada.
 
 Lanzo linpeas.sh pero no veo nada raro... asique paso a lanzar pspy para buscar procesos ocultos en ejecución
 
