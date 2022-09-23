@@ -7,7 +7,7 @@ category    : [ HackMyVM ]
 tags        : [ Linux ]
 ---
 
-En esta ocasión tenemos una máquina nivel Easy creada por Shelldredd, tendremos varios trolleos a lo largo de la explotación y debemos fijarnos y prestar atención a todo.
+En esta ocasión tenemos una máquina nivel Easy creada por ShellDredd, tendremos varios trolleos a lo largo de la explotación y debemos fijarnos y prestar atención a todo.
 
 Canal Shelldredd Informática [https://www.youtube.com/c/ShellDreddInform%C3%A1tica](https://www.youtube.com/c/ShellDreddInform%C3%A1tica)
 
