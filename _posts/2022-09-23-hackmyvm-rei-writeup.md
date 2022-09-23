@@ -111,6 +111,9 @@ Pero hay que fijarse en todo, ya que la foto nos da varios datos interesantes...
 
 >Chuck Norris is the user master
 
+![](/assets/images/HMV/Rei-HackMyVM/balance.gif)
+
+
 Podríamos estar ante un usuario y una posible contraseña... Asique porque no probar?
 
 ![](/assets/images/HMV/Rei-HackMyVM/karate1.gif)
