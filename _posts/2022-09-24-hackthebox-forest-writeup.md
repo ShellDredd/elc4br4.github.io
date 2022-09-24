@@ -118,15 +118,15 @@ Host script results:
 
 Al haber tantos puertos, extraigo la información más relevante para poder seguir un orden y no perderme.
 
-> Kerberos en el puerto 88
+* Kerberos en el puerto 88
 
-> LDAP puertos 389/636
+* LDAP puertos 389/636
 
-> SMB puerto 445
+* SMB puerto 445
 
-> WinRM puerto 5985
+* WinRM puerto 5985
 
-> Dominio htb.local
+* Dominio htb.local
 
 # SMB
 
