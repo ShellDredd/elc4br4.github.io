@@ -11,6 +11,8 @@ En esta ocasión vamos a resolver la máquina Forest de nivel Easy, que la verda
 
 ![](/assets/images/HTB/Forest-HackTheBox/rating-forest.webp)
 
+[![HTBadge](https://www.hackthebox.eu/badge/image/533771)](https://www.hackthebox.com/home/users/profile/533771)
+
 # Reconocimiento de Puertos
 
 Antes de comenzar con el reconocimiento, lanzo la utilidad WhichSystem que nos indica ante que sistema nos enfrentamos, basándose en el ttl.
