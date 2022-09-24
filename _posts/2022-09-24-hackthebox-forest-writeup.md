@@ -57,11 +57,11 @@ Tenemos un listado de puertos muy amplio, procedo a obtener más info de los mis
 
 Al tener tantos puertos uso la función extracPorts de s4vitar para copiarlos todos al portapapeles:
 
-![](/assets/images/HTB/Forest-HackTheBox/extracports1.png)
+![](/assets/images/HTB/Forest-HackTheBox/extractports1.png)
 
 Os dejo el código que debe añadirse al archivo de configuración de vuestra shell para poder usar la función.
 
-![](/assets/images/HTB/Forest-HackTheBox/extracports2.webp)
+![](/assets/images/HTB/Forest-HackTheBox/extractports2.webp)
 
 Una vez tenemos los puertos en el portapapeles ya lanzo el nmap
 
