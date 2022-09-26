@@ -17,7 +17,7 @@ Perfil-HackTheBox:
 
 [![HTBadge](https://www.hackthebox.eu/badge/image/533771)](https://www.hackthebox.com/home/users/profile/533771)
 
-[![Visitas](https://counter9.stat.ovh/private/contadorvisitasgratis.php?c=x181b4swa17sg859x673zlfxbeupjaa8)](https://www.contadorvisitasgratis.com)
+
 
 
 
