@@ -18,7 +18,7 @@
 	position: relative;
 }
 .stat-detail {
-	color:#fff;
+	color:rgb(255, 0, 0);
 	padding-top:10px;
 	font: italic 1.3rem/1.75 "Georgia", Courier, monospace;
 }
