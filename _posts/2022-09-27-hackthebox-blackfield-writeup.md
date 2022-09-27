@@ -9,6 +9,10 @@ tags        : [ Windows ]
 
 En esta ocasión me he aventurado a resolver una máquina de nivel HARD Windows. Es la primera vez que me enfrento a una máquina de este calibre, me ha llevado mucho tiempo pero finalmente la he pwneado.
 
+![](/assets/images/HTB/Blackfield-HackTheBox/Blackfield2.webp)
+
+![](/assets/images/HTB/Blackfield-HackTheBox/blackfield-rating.webp)
+
 # Reconocimiento de Puertos
 
 Antes de comenzar a escanear puertos, debemos saber a que sistema operativo nos enfrentamos.
@@ -372,4 +376,4 @@ Y ya podemos loguearnos como administrador a través de winrm.
 
 ![](/assets/images/HTB/Blackfield-HackTheBox/root.webp)
 
-
+![](/assets/images/HTB/Blackfield-HackTheBox/finish.gif)
