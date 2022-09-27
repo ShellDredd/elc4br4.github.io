@@ -98,7 +98,7 @@ A continuación voy a craquearlo usando hascat
 
 Listo, tenemos un usuario y una contraseña.
 
-> support:#00^BlackKnight
+> `support:#00^BlackKnight`
 
 Ahora que ya tengo credenciales vuelvo para atrás de nuevo para enumerar usuarios del Dominio pero a través de la herramienta enum4linux.
 
@@ -176,7 +176,7 @@ smb: \> ls
 		5102079 blocks of size 4096. 1660717 blocks available
 ```
 
-En la ruta commands_output encuentro avrios archivos.
+En la ruta commands_output encuentro varios archivos.
 
 ```smb
 smb: \commands_output\> ls
