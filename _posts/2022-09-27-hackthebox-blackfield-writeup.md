@@ -195,13 +195,13 @@ smb: \commands_output\> ls
 		5102079 blocks of size 4096. 1667267 blocks available
 ```
 
-Miro todos los archivos y en el archivo `domain_admins.txt` enceuntro un usuario más administrador del dominio.
+Miro todos los archivos y en el archivo `domain_admins.txt` encuentro un usuario más, administrador del dominio.
 
 ![](/assets/images/HTB/Blackfield-HackTheBox/doamin_admins.webp)
 
 > Ipwn3dYourCompany
 
-Sigo buscando y en la carpeta memory_analysis encuentro esto
+Sigo buscando y en la carpeta memory_analysis encuentro estos archivos .zip
 
 ```smb
 smb: \memory_analysis\> ls
@@ -227,7 +227,7 @@ smb: \memory_analysis\> ls
 		5102079 blocks of size 4096. 1682559 blocks available
 ```
 
-> Son archivos zip de un dumpeo de memoria.
+> Son archivos .zip de un dumpeo de memoria.
 
 Pero el que más me llama la atencion es el lsas.zip, lsas es el Servicio de Subsistema de Autoridad de Seguridad Local.
 
