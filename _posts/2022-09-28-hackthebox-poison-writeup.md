@@ -153,7 +153,7 @@ Decrypted Hex Pass= '564e435040242421'
 
 Y ya puedo conectarme.
 
-> `❯ vncviewer 127.0.0.1:5901 -passwd VNCP@$$!`
+> `vncviewer 127.0.0.1:5901 -passwd VNCP@$$!`
 
 ![](/assets/images/HTB/Poison-HackTheBox/vnc.webp)
 
