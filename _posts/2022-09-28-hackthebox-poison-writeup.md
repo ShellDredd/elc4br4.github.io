@@ -129,7 +129,7 @@ Tenemos el servicio VNC activo en el puerto 5901, asique para poder conectarme h
 
 Para crear el túnel:
 
-> `❯ ssh -L 5901:127.0.0.1:5901 charix@10.10.10.84`
+> `ssh -L 5901:127.0.0.1:5901 charix@10.10.10.84`
 
 Una vez creado ya puedo conectarme al servicio VNC a través de la herramienta vncviewer.
 
