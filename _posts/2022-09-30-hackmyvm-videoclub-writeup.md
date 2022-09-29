@@ -7,8 +7,8 @@ category    : [ HackMyVM ]
 tags        : [ Linux ]
 ---
 
-En esta ocasión resuelvo la máquina Videoclub de nuestro compañero ShellDredd Informática. 
-Tendremos una enumeración un poco larga, explotaremos RCE para lograr la intrusión al sistema y escalaremos privilegios a través del archivo SUID ionice.
+🎮En esta ocasión resuelvo la máquina Videoclub de nuestro compañero ShellDredd Informática. 
+Tendremos una enumeración un poco larga, explotaremos RCE para lograr la intrusión al sistema y escalaremos privilegios a través del archivo SUID ionice.🎮
 
 CANAL ShellDredd --> [https://www.youtube.com/c/ShellDreddInform%C3%A1tica](https://www.youtube.com/c/ShellDreddInform%C3%A1tica)
 
