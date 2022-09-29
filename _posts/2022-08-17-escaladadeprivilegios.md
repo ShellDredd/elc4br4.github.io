@@ -81,7 +81,7 @@ La variable PATH puede tener un compilador o un lenguaje de secuencias de comand
 ```bash
 sudo -l → el sistema se puede configurar para permitir que los usuarios ejecuten algunos o todos los comandos con privilegios root.
 
-El comando `sudo -l` se usa para enumerar todos aquellos comandos que se pueden ejecutar como root usando el comando sudo.
+El comando sudo -l se usa para enumerar todos aquellos comandos que se pueden ejecutar como root usando el comando sudo.
 ```
 
 ![](/assets/images/escalada-de-privilegios/sudo-l.png)
@@ -92,7 +92,7 @@ Comando ls → Uno de los comandos más usados en linux.
 Mientras buscamos posibles vectores de ataque debemos usar este comando con el parámetro -la (ls -la) ya que de esta forma podemos ver que permisos tienen los archivos que estamos viendo y encontrar un posible vector de escalada de privilegios.
 ```
 
-**EJEMPLO**: archivo passwd con permisos de escritura, podemos generar una contraseña usando mkpasswd e insertarla en el usuario root y loguearnos como root usando la contraseña generada.
+*EJEMPLO*: archivo passwd con permisos de escritura, podemos generar una contraseña usando mkpasswd e insertarla en el usuario root y loguearnos como root usando la contraseña generada.
 
 ```bash
 Comando id → El comando id nos proporciona información acerca del usuario, pertenencia a grupos y el nivel de privilegios del usuario.
@@ -168,7 +168,7 @@ default via 192.168.0.1 dev enp0s3 proto dhcp metric 100
 ```bash
 Comando netstat → a través de este comando podemos ver las conexiones existentes activas.
 
-`netstat -a`: muestra todos los puertos de escucha y las conexiones establecidas.
+netstat -a: muestra todos los puertos de escucha y las conexiones establecidas.
 ```
 
 ![](/assets/images/articles/escalada-de-privilegios/netstat.png)
@@ -215,13 +215,14 @@ Buscar archivos:
 
     find / -perm -u=s -type f 2>/dev/null: Buscar archivos con el bit SUID, lo que nos permite ejecutar el archivo con un nivel de privilegios superior al del usuario actual.
     ```
+    ```
 
 
 ![](/assets/images/escalada-de-privilegios/escaladakernel.jpg)
 
-# ESCALADA DE PRIVILEGIOS VULNERABILIDADES DEL KERNEL
+#ESCALADA DE PRIVILEGIOS VULNERABILIDADES DEL KERNEL
 
-**La metodología es simple**
+*La metodología es simple*
 
 1.Identificar versión del Kernel
 
