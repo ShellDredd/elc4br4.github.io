@@ -186,38 +186,36 @@ netstat -a: muestra todos los puertos de escucha y las conexiones establecidas.
 
 ![](/assets/images/articles/escalada-de-privilegios/findcomando.jpeg)
 
-```bash
 Comando find → Este comando es de los más útiles a la hora de buscar posibles vectores de escalada, gracias a este comando podemos “buscar”.
 
 Buscar archivos:
 
-    find . -name archivo.txt: busque el archivo llamado “archivo.txt” en el directorio actual
+```bash
+find . -name archivo.txt: busque el archivo llamado archivo.txt en el directorio actual
 
-    find /home -name archivo.txt: busque los nombres de archivo “archivo.txt” en el directorio /home
+find /home -name archivo.txt: busque los nombres de archivo archivo.txt en el directorio /home
 
-    find / -type d -name config: busque el directorio llamado config debajo de “/”
+find / -type d -name config: busque el directorio llamado config debajo de /
 
-    find / -type f -perm 0777: busque archivos con los permisos 777 (archivos legibles y ejecutables por todos los usuarios)
+find / -type f -perm 0777: busque archivos con los permisos 777 (archivos legibles y ejecutables por todos los usuarios)
 
-    find / -perm a=x: encontrar archivos ejecutables
+find / -perm a=x: encontrar archivos ejecutables
 
-    find /home -user kali: encuentre todos los archivos para el usuario “frank” en “/ home”
+find /home -user kali: encuentre todos los archivos para el usuario kali en / home
 
-    find / -mtime 10: encuentra archivos que fueron modificados en los últimos 10 días
+find / -mtime 10: encuentra archivos que fueron modificados en los últimos 10 días
 
-    find / -atime 10: busca archivos a los que se accedió en los últimos 10 días
+find / -atime 10: busca archivos a los que se accedió en los últimos 10 días
 
-    find / -cmin -60: busca archivos modificados en la última hora (60 minutos)
+find / -cmin -60: busca archivos modificados en la última hora (60 minutos)
 
-    find / -amin -60: encuentra accesos a archivos en la última hora (60 minutos)
+find / -amin -60: encuentra accesos a archivos en la última hora (60 minutos)
 
-    find / -size 50M: encuentra archivos con un tamaño de 50 MB
+find / -size 50M: encuentra archivos con un tamaño de 50 MB
 
-    find / -perm -u=s -type f 2>/dev/null: Buscar archivos con el bit SUID, lo que nos permite ejecutar el archivo con un nivel de privilegios superior al del usuario actual.
-    ```
-    ```
-
-
+find / -perm -u=s -type f 2>/dev/null: Buscar archivos con el bit SUID, lo que nos permite ejecutar el archivo con un nivel de privilegios superior al       del usuario actual.
+```
+    
 ![](/assets/images/escalada-de-privilegios/escaladakernel.jpg)
 
 #ESCALADA DE PRIVILEGIOS VULNERABILIDADES DEL KERNEL
@@ -226,7 +224,7 @@ Buscar archivos:
 
 1.Identificar versión del Kernel
 
-```
+```bash
 ❯ uname -a
 Linux elc4br4 3.13.0-24-generic #46-Ubuntu SMP
 ```
