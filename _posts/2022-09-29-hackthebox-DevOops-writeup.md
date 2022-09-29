@@ -82,7 +82,7 @@ Si hablamos de XML... se me ocurre XXE, asique buscaré información sobre la vu
 
 Buscando encuentro información en la web de OWASP.
 
-[https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing)
+[https://owasp.org/www-community/vulnerabilities](https://owasp.org/www-community/vulnerabilities)
 
 ![](/assets/images/HTB/DevOops-HackTheBox/XXE.webp)
 
