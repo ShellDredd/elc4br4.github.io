@@ -129,7 +129,7 @@ Tenemos el servicio VNC activo en el puerto 5901, asique para poder conectarme h
 
 Para crear el túnel:
 
-> `❯ ssh -L 5901:127.0.0.1:5901 charix@10.10.10.84`
+> `ssh -L 5901:127.0.0.1:5901 charix@10.10.10.84`
 
 Una vez creado ya puedo conectarme al servicio VNC a través de la herramienta vncviewer.
 
@@ -153,7 +153,7 @@ Decrypted Hex Pass= '564e435040242421'
 
 Y ya puedo conectarme.
 
-> `❯ vncviewer 127.0.0.1:5901 -passwd VNCP@$$!`
+> `vncviewer 127.0.0.1:5901 -passwd VNCP@$$!`
 
 ![](/assets/images/HTB/Poison-HackTheBox/vnc.webp)
 
