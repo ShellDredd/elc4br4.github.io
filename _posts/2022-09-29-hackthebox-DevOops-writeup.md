@@ -7,6 +7,8 @@ category    : [ htb ]
 tags        : [ Linux ]
 ---
 
+Estamos ante una máquina Linux de nivel MEDIUM en la que explotaremos la vulnerabilidad XXE para leer archivos generando un archivo .xml y escalaremos privilegios a través de un rsa.
+
 ![](/assets/images/HTB/DevOops-HackTheBox/DevOops2.webp)
 
 ![](/assets/images/HTB/DevOops-HackTheBox/DevOops-rating.webp)
@@ -163,3 +165,7 @@ Tenemos dos claves rsa, una en rojo y la otra en verde, creo que debido a un err
 Una vez lo tenemos copiado en un archivo le asigamos los permisos 600 con `chmod 600 id_rsa2` y nos logueamos por ssh como root.
 
 ![](/assets/images/HTB/DevOops-HackTheBox/root.webp)
+
+👨🏻‍💻Y ya hemos pwneado la máquina DevOops👨🏻‍💻
+
+![](/assets/images/HTB/DevOops-HackTheBox/gif.gif)
