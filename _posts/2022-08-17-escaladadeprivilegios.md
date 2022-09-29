@@ -222,19 +222,19 @@ find / -perm -u=s -type f 2>/dev/null: Buscar archivos con el bit SUID, lo que n
 
 *La metodología es simple*
 
-1.Identificar versión del Kernel
+1. Identificar versión del Kernel
 
 ```bash
 ❯ uname -a
 Linux elc4br4 3.13.0-24-generic #46-Ubuntu SMP
 ```
 
-2.Buscar y encontrar un código de explotación o exploit para el kernel.
+2. Buscar y encontrar un código de explotación o exploit para el kernel.
 
 ![](/assets/images/escalada-de-privilegios/escalada1.png)
 
 
-3.Ejecutar el exploit y conseguir escalar privilegios.
+3. Ejecutar el exploit y conseguir escalar privilegios.
 
 ![](/assets/images/escalada-de-privilegios/escalada2.png)
 
