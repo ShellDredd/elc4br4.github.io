@@ -272,3 +272,5 @@ Y ya somos root y ya podemos leer la flag root.txt!!!
 
 ![](/assets/images/HMV/Videoclub-HackMyVM/root.webp)
 
+_Agradecimientos a Shelldredd por esta máquina_
+
