@@ -218,7 +218,7 @@ find / -perm -u=s -type f 2>/dev/null: Buscar archivos con el bit SUID, lo que n
     
 ![](/assets/images/escalada-de-privilegios/escaladakernel.jpg)
 
-#ESCALADA DE PRIVILEGIOS VULNERABILIDADES DEL KERNEL
+# ESCALADA DE PRIVILEGIOS VULNERABILIDADES DEL KERNEL
 
 *La metodología es simple*
 
