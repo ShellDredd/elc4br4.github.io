@@ -268,7 +268,7 @@ Ejecutamos el comando que nos indica la web:
 
 > `/home/librarian/ionice /bin/sh -p`
 
-Y ya somos root y ya podemos leer la flag root.txt
+Y ya somos root y ya podemos leer la flag root.txt!!!
 
 ![](/assets/images/HMV/Videoclub-HackMyVM/root.webp)
 
