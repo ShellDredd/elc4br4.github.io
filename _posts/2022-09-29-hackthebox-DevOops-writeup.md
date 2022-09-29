@@ -1,6 +1,6 @@
 ---
 layout      : post
-title       : "Poison - HackTheBox"
+title       : "DevOops - HackTheBox"
 author      : elc4br4
 image       : assets/images/HTB/DevOops-HackTheBox/DevOops.webp
 category    : [ htb ]
