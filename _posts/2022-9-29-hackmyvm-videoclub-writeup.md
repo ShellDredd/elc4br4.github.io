@@ -209,7 +209,7 @@ Terminal type? xterm
 
 ```bash
 www-data@video-club-margarita:/var/www/html$ export TERM=xterm
-www-data@video-club-margarita:/var/www/html$ export SHEL=bash
+www-data@video-club-margarita:/var/www/html$ export SHELL=bash
 ```
 
 # Escalada de Privilegios
