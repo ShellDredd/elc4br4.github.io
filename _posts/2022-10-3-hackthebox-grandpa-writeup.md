@@ -2,7 +2,7 @@
 layout      : post
 title       : "Grandpa - HackTheBox"
 author      : elc4br4
-image       : assets/images/HTB/DevOops-HackTheBox/Grandpa.webp
+image       : assets/images/HTB/Grandpa-HackTheBox/Grandpa.webp
 category    : [ htb ]
 tags        : [ Windows ]
 ---
