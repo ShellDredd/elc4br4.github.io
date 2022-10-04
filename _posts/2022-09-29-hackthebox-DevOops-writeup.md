@@ -76,7 +76,7 @@ Pruebo a subir una reverse shell en php y capturar la petición con Burpsuite.
 
 Pero no ocurre nada, aunque si nos fijamos en el servidor web veremos esto.
 
-> `XML elements: Author, Subject, Content'
+> `XML elements: Author, Subject, Content`
 
 Debemos subir un archivo XML que contenga los campos Author, Subject y Content.
 
