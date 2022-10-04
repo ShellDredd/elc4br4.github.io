@@ -45,7 +45,7 @@ PORT   STATE SERVICE VERSION
 Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 ```
 
-> Servidor Web IIS httpd 6.0
+>`Servidor Web IIS httpd 6.0`
 
 # Enumeración Web
 
