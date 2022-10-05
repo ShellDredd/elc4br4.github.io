@@ -163,7 +163,7 @@ bash -p
 
 `chmod +x cat`
 
-> Lo añadimos a la variable de entorno PATH
+> Lo añadimos la ruta a la variable de entorno PATH
 
 `export PATH=/home/puppetmaster/:$PATH`
 
