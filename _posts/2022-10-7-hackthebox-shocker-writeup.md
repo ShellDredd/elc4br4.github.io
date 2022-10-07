@@ -71,7 +71,7 @@ Encontramos la ruta cgi-bin... que me hace pensar que este servidor podría ser 
 
 Buscando información al respecto encuentro esto.
 
-![https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/cgi](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/cgi)
+[https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/cgi](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/cgi)
 
 ![](/assets/images/HTB/Shocker-HackTheBox/web2.webp)
 
@@ -161,7 +161,7 @@ Podemos ejecutar como el usuario root sin contraseña el binario perl.
 
 Y como de costumbre, nos dirigimos a la web GTFOBINS
 
-![https://gtfobins.github.io/gtfobins/perl/](https://gtfobins.github.io/gtfobins/perl/) 
+[https://gtfobins.github.io/gtfobins/perl/](https://gtfobins.github.io/gtfobins/perl/) 
 
 Ejecutamos el comando:
 
