@@ -83,11 +83,11 @@ Asique procedo a fuzzear pero probando varias extensiones por si acaso, ya que b
 
 ![](/assets/images/HTB/Shocker-HackTheBox/feroxbuster1.webp)
 
-Encontramos el archivo user.sh por lo tanto ya podríamos comprobar si es vulnerable, para comprobarlo existen varias formas, yo mostraré dos formas, (una a través de terminal y otra a través de metasploit.)
+Encontramos el archivo user.sh por lo tanto ya podríamos comprobar si es vulnerable, para comprobarlo existen varias formas, pero yo solo mostraré dos de ellas, una a través de nmap y otra a través de metasploit.
 
 # Detección ShellShock a través de Metasploit
 
-Abrimos metasploit y usamos el módulo auxiliar 
+Abrimos metasploit y usamos el módulo auxiliar: 
 
 > scanner/http/apache_mod_cgi_bash_env
 
@@ -125,7 +125,9 @@ Y como vemos es Vulnerable a Shellshock.
 
 Una vez hemos detectado que es vulnerable procedo a su explotación para acceder al sistema.
 
-En este caso, en vez de usar metasploit, o terminal, voy a explotarlo a través de burp, modificando el user agent podemos introducir comandos.
+En este caso, en vez de usar metasploit voy a explotarlo a través de burp.
+
+Modificando el user agent podemos introducir comandos.
 
 De forma que primeramente hago un ping a la ip de mi interfaz tun0 (la vpn).
 
