@@ -56,7 +56,7 @@ Abro el navegador y accedo al servidor web.
 
 De primeras no hay nada, y en el código fuente tampoco veo nada que me pueda servir, de forma que procedo a enumerar rutas en el servidor.
 
-![](/assets/images/HMV/Celebritysoup-HackMyVM/feroxbuster.webp
+![](/assets/images/HMV/Celebritysoup-HackMyVM/feroxbuster.webp)
 
 Como se puede ver, hay varias rutas, pero la que más me llama la atención es el archivo robots.txt, asique voy a ver que tenemos.
 
@@ -163,7 +163,7 @@ bash -p
 
 `chmod +x cat`
 
-> Lo añadimos a la variable de entorno PATH
+> Lo añadimos la ruta a la variable de entorno PATH
 
 `export PATH=/home/puppetmaster/:$PATH`
 
