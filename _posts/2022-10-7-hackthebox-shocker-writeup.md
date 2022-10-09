@@ -17,7 +17,7 @@ tags        : [ Linux ]
 **Un pequeño INDIC**
 
 1. [Reconocimiento](#reconocimiento)
-    * [Reconocimiento de Puertos](#reconocimiento--reconocimiento)
+    * [Reconocimiento de Puertos](#recon-nmap)
 2. [Enumeración](#Enumeración) 
     * [Enumeración Web](#enumeración--enumeración)
 3. [Detección ShellShock](#detección-shellshock)    
@@ -29,9 +29,9 @@ tags        : [ Linux ]
     * [Perl](#perl-perl-perl)    
 
 
-# Reconocimiento [#](Reconocimiento) {#Reconocimiento}
+# Reconocimiento [#](reconocimiento) {#reconocimiento}
 
-## Reconocimiento de Puertos [📌](#Reconocimiento de Puertos) {#Reconocimiento de Puertos}
+## Reconocimiento de Puertos [📌](#recon-nmap) {#recon-nmap}
 
 Como siempre comenzamos lanzando la utilidad Whichsystem para saber ante que sistema operativo nos enfrentamos.
 
