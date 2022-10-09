@@ -28,6 +28,7 @@ tags        : [ Linux ]
  5. [Escalada de Privilegios](#escalada-de-privilegios) 
     * [Perl](#perl-perl-perl)    
 
+---
 
 # Reconocimiento [#](reconocimiento) {#reconocimiento}
 
