@@ -25,7 +25,7 @@ Tocaremos un poco de FTP (que nos dará pistas), explotaremos una vulnerabilidad
 3. [SMB](#smb).
 4. [Enumeración](#enumeración).
     * [Puerto 80](#enum-web80).
-    * [Puerto 8443](##enum-web8443).
+    * [Puerto 8443](#enum-web8443).
 5. [Escalada de Privilegios](#privesc). 
     * [NSClient++](#nclient).      
 
@@ -312,7 +312,7 @@ Uso las credenciales para conectarme por ssh y obtengo la flag user.txt
 
 ----
 
-## NSClient++[👽](nsclient) {#nsclient}
+## NSClient++[👽](#nsclient) {#nsclient}
 
 Para escalar recordemos que tenemos una vulnerabilidad en el servidor NSClient++
 
