@@ -13,8 +13,10 @@ tags        : [ Linux ]
 
 ![](/assets/images/HTB/Shocker-HackTheBox/shocker-rating.webp)
 
----
-**Un pequeño INDIC**
+...
+
+
+**Un pequeño INDICE**
 
 1. [Reconocimiento](#reconocimiento).
     * [Reconocimiento de Puertos](#recon-nmap).
@@ -28,7 +30,9 @@ tags        : [ Linux ]
  5. [Escalada de Privilegios](#privesc). 
     * [Perl](#perl).   
 
----
+
+
+...
 
 # Reconocimiento [#](reconocimiento) {#reconocimiento}
 
