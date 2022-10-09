@@ -14,7 +14,28 @@ En esta ocasión estaré resolviendo una máquina de nivel MEDIUM de HackTheBox 
 
 ![](/assets/images/HTB/Poison-HackTheBox/Poison-rating.webp)
 
-# Reconocimiento de Puertos
+...
+
+
+**Un pequeño INDICE**
+
+1. [Reconocimiento](#reconocimiento).
+    * [Reconocimiento de Puertos](#recon-nmap).
+2. [Enumeración](#enumeración).
+    * [Enumeración Web](#enum-web).
+3. [Sesión SSH](#sesion-ssh).   
+    * [SSH](#ssh).
+ 5. [Escalada de Privilegios](#privesc). 
+    * [VNC](#vnc).   
+
+
+...
+
+# Reconocimiento [#](reconocimiento) {#reconocimiento}
+
+----
+
+## Reconocimiento de Puertos [📌](#recon-nmap) {#recon-nmap}
 
 ```nmap
 PORT   STATE SERVICE
@@ -39,7 +60,11 @@ PORT   STATE SERVICE VERSION
 Service Info: OS: FreeBSD; CPE: cpe:/o:freebsd:freebsd
 ```
 
-# Enumeración Web 
+# Enumeración [#](enumeración) {#enumeración}
+
+----
+
+## Enumeración Web [📌](#enum-web) {#enum-web}
 
 Al acceder desde el navegador para revisar el servidor web vemos lo siguiente:
 
@@ -77,13 +102,21 @@ Tenemos el usuario Charix y su contraseña.
 
 Ahora intento loguearme con esas credenciales a través de ssh para obtener acceso al sistema.
 
-# Sesión SSH
+# Sesión SSH [#](sesion-ssh) {#sesion-ssh}
+
+----
+
+## SSH [🔥](#ssh) {#ssh}
 
 Una vez nos logueamos podemos leer la flag user.txt 
 
 ![](/assets/images/HTB/Poison-HackTheBox/user.webp)
 
-# Escalada de Privilegios
+# Escalada de Privilegios[#](privesc) {#privesc}
+
+----
+
+## VNC [👽](vcn) {#vnc}
 
 Ahora toca escalar privilegios para leer la flag root.txt
 

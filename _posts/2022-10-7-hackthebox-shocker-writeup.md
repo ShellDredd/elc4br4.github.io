@@ -31,7 +31,6 @@ tags        : [ Linux ]
     * [Perl](#perl).   
 
 
-
 ...
 
 # Reconocimiento [#](reconocimiento) {#reconocimiento}
