@@ -142,7 +142,7 @@ Y lo ejecutamos
 
 Y como vemos, es `vulnerable a ShellShock`.
 
-## Nmap [👿](#nmap) {#map}
+## Nmap [👿](#nmap) {#nmap}
 
 Para detectar si es vulnerable a través de nmap, usaremos un `script` que ya trae el propio nmap.
 
