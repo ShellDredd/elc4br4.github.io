@@ -18,15 +18,15 @@ tags        : [ Linux ]
 
 1. [Reconocimiento](#reconocimiento)
     * [Reconocimiento de Puertos](#recon-nmap)
-2. [Enumeración](#Enumeración) 
-    * [Enumeración Web](#enumeración--enumeración)
-3. [Detección ShellShock](#detección-shellshock)    
-    * [Metasploit](#metasploit-metasploit-metasploit)
-    * [Nmap](#nmap-nmap-nmap)
-4. [Explotación ShellShock](#Explotación-ShellShock)    
-    * [Burpsuite](#burpsuite-burpsuite-burpsuite)
- 5. [Escalada de Privilegios](#escalada-de-privilegios) 
-    * [Perl](#perl-perl-perl)    
+2. [Enumeración](#enumeración) 
+    * [Enumeración Web](#enum-web)
+3. [Detección ShellShock](#detect-shellshock)    
+    * [Metasploit](#metasploit)
+    * [Nmap](#nmap)
+4. [Explotación ShellShock](#explotacion)    
+    * [Burpsuite](#burpsuite))
+ 5. [Escalada de Privilegios](#privesc) 
+    * [Perl](#perl)    
 
 ---
 
@@ -70,9 +70,9 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 De momento no veo nada relevante, asique habría que empezar a darle caña al puerto 80 enumerando el servidor web.
 
-# Enumeración [#](Enumeración) {#Enumeración}
+# Enumeración [#](enumeración) {#enumeración}
 
-## Enumeración Web [📌](#Enumeración Web) {#Enumeración Web}
+## Enumeración Web [📌](#enum-web) {#enum-web}
 
 Abro el navegador para ver que tenemos en el servidor web.
 
@@ -110,9 +110,9 @@ Asique procedo a fuzzear pero probando varias extensiones por si acaso, ya que b
 
 Encontramos el archivo `user.sh` por lo tanto ya podríamos comprobar si es vulnerable, para comprobarlo existen varias formas, pero yo solo mostraré dos de ellas, una a través de metasploit y otra a través de nmap.
 
-# Detección ShellShock [👿](Detección ShellShock) {#Detección ShellShock}
+# Detección ShellShock [👿](#detect-shellshock) {#detect-shellshock}
 
-## Metasploit (#Metasploit) {#Metasploit}
+## Metasploit (#metasploit) {#metasploit}
 
 Abrimos metasploit y usamos el módulo auxiliar: 
 
@@ -132,7 +132,7 @@ Y lo ejecutamos
 
 Y como vemos, es `vulnerable a ShellShock`.
 
-## Nmap (#Nmap) {#Nmap}
+## Nmap (#nmap) {#map}
 
 Para detectar si es vulnerable a través de nmap, usaremos un `script` que ya trae el propio nmap.
 
@@ -148,9 +148,9 @@ Y a través de este comando comprobamos si es vulnerable o no.
 
 Y como vemos es `Vulnerable a ShellShock`.
 
-# Explotación ShellShock [👿](Explotación ShellShock) {#Explotación ShellShock}
+# Explotación ShellShock [👿](explotacion) {#explotacion}
 
-## Burpsuite (#Burpsuite) {#Burpsuite}
+## Burpsuite (#burpsuite) {#burpsuite}
 
 Una vez hemos detectado que es vulnerable procedo a su explotación para acceder al sistema.
 
@@ -178,9 +178,9 @@ Una vez dentro ya podemos leer la flag `user.txt`
 
 Y ahora toca `escalar privilegios`.
 
-# Escalada de Privilegios [👨‍💻](Escalada de Privilegios) {#Escalada de Privilegios}
+# Escalada de Privilegios [👨‍💻](privesc) {#privesc}
 
-## Perl (#Perl) {#Perl}
+## Perl (#perl) {#perl}
 
 Como siempre comenzamos enumerando el sistema en busca de `vectores de escalada`.
 
