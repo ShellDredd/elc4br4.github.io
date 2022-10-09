@@ -13,6 +13,9 @@ En esta ocasión me he aventurado a resolver una máquina de nivel HARD Windows.
 
 ![](/assets/images/HTB/Blackfield-HackTheBox/blackfield-rating.webp)
 
+...
+
+
 **Un pequeño INDICE**
 
 1. [Reconocimiento](#reconocimiento).
