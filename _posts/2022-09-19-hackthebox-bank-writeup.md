@@ -13,7 +13,28 @@ tags        : [ Linux ]
 
 [![HTBadge](https://www.hackthebox.eu/badge/image/533771)](https://www.hackthebox.com/home/users/profile/533771)
 
-# Reconocimiento de Puertos
+...
+
+
+**Un pequeño INDICE**
+
+1. [Reconocimiento](#reconocimiento).
+    * [Reconocimiento de Puertos](#recon-nmap).
+2. [Enumeración](#enumeración).
+    * [Enumeración Web](#enum-web).
+3. [Explotación](#explotacion).   
+    * [Reverse Shell](#rev-shell).     
+4. [Escalada de Privilegios](#privesc). 
+    * [Emergency](#emergency).   
+
+
+...
+
+# Reconocimiento [#](reconocimiento) {#reconocimiento}
+
+----
+
+## Reconocimiento de Puertos [📌](#recon-nmap) {#recon-nmap}
 
 ```nmap
 PORT   STATE SERVICE REASON
@@ -48,7 +69,11 @@ Añadimos al archivo host la ip y el dominio bank.htb
 
 Procedo a enumerar el servidor web
 
-# Enumeración Web
+# Enumeración [#](enumeración) {#enumeración}
+
+----
+
+## Enumeración Web [📌](#enum-web) {#enum-web}
 
 Encontramos un login para acceder pero no tenemos credenciales, asique me pongo a enumerar rutas en el servidor para ver que tenemos.
 
@@ -81,6 +106,12 @@ Usaré las credenciales para iniciar sesión en el panel web.
 Una vez dentro encontramos un panel con todas las transacciones y datos bancarios.
 
 ![](/assets/images/HTB/Bank-HackTheBox/web4.png)
+
+# Explotación [#](explotacion) {#explotacion}
+
+----
+
+## Reverse Shell [🔥](#rev-shell) {#rev-shell}
 
 Navegando por la web me dirijo a Support y encuentro una formulario donde puedo subir un archivo.
 
@@ -134,7 +165,11 @@ Una vez dentro ya podemos leer el user.txt
 Ahora toca escalar privilegios
 
 
-# Escalada de Privilegios 
+# Escalada de Privilegios [#](privesc) {#privesc}
+
+----
+
+## Emergency [🚑](emergency) {#emergency}
 
 Busco binarios SUID de propietarios root con el comando find 
 
