@@ -13,7 +13,22 @@ En esta ocasión me he aventurado a resolver una máquina de nivel HARD Windows.
 
 ![](/assets/images/HTB/Blackfield-HackTheBox/blackfield-rating.webp)
 
-# Reconocimiento de Puertos
+**Un pequeño INDICE**
+
+1. [Reconocimiento](#reconocimiento).
+    * [Reconocimiento de Puertos](#recon-nmap).
+2. [Explotación](#explotación).
+3. [Escalada de Privilegios](#privesc). 
+    * [dsh](#dsh).   
+
+
+...
+
+# Reconocimiento [#](reconocimiento) {#reconocimiento}
+
+----
+
+## Reconocimiento de Puertos [📌](#recon-nmap) {#recon-nmap}
 
 Antes de comenzar a escanear puertos, debemos saber a que sistema operativo nos enfrentamos.
 
@@ -66,7 +81,7 @@ Host script results:
 A continuación procedo a emumerar el AD.
 
 
-# Explotación
+# Explotación [#](explotacion) {#explotacion}
 
 A través de rpcclient usando una null session intento enumerar usuarios.
 
@@ -260,7 +275,11 @@ Ahora ya puedo conectarme al sistema a través de WinRM
 Y podemos leer la flag user.txt
 
 
-# Escalada de Privilegios
+# Escalada de Privilegios [#](privesc) {#privesc}
+
+----
+
+## dsh[👽](dsh) {#dsh}
 
 Para la escalada lo primero que hago es enumerar privilegios del usuario
 
