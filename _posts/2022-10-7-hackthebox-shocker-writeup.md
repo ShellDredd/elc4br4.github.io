@@ -114,7 +114,7 @@ Asique procedo a fuzzear pero probando varias extensiones por si acaso, ya que b
 
 Encontramos el archivo `user.sh` por lo tanto ya podríamos comprobar si es vulnerable, para comprobarlo existen varias formas, pero yo solo mostraré dos de ellas, una a través de metasploit y otra a través de nmap.
 
-# Detección ShellShock [👿](#detect-shellshock) {#detect-shellshock}
+# Detección ShellShock [#](#detect-shellshock) {#detect-shellshock}
 
 ----
 
@@ -138,7 +138,7 @@ Y lo ejecutamos
 
 Y como vemos, es `vulnerable a ShellShock`.
 
-## Nmap (#nmap) {#map}
+## Nmap [👿](#nmap) {#map}
 
 Para detectar si es vulnerable a través de nmap, usaremos un `script` que ya trae el propio nmap.
 
@@ -154,11 +154,11 @@ Y a través de este comando comprobamos si es vulnerable o no.
 
 Y como vemos es `Vulnerable a ShellShock`.
 
-# Explotación ShellShock [👿](explotacion) {#explotacion}
+# Explotación ShellShock [#](explotacion) {#explotacion}
 
 ----
 
-## Burpsuite (#burpsuite) {#burpsuite}
+## Burpsuite [🔥](#burpsuite) {#burpsuite}
 
 Una vez hemos detectado que es vulnerable procedo a su explotación para acceder al sistema.
 
@@ -186,11 +186,11 @@ Una vez dentro ya podemos leer la flag `user.txt`
 
 Y ahora toca `escalar privilegios`.
 
-# Escalada de Privilegios [👨‍💻](privesc) {#privesc}
+# Escalada de Privilegios[#](privesc) {#privesc}
 
 ----
 
-## Perl (#perl) {#perl}
+## Perl [👨‍💻](#perl) {#perl}
 
 Como siempre comenzamos enumerando el sistema en busca de `vectores de escalada`.
 
