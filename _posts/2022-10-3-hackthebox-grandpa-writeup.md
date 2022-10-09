@@ -13,7 +13,28 @@ tags        : [ Windows ]
 
 ![](/assets/images/HTB/Grandpa-HackTheBox/Grandpa-rating.webp)
 
-# Reconocimiento de Puertos
+...
+
+
+**Un pequeño INDICE**
+
+1. [Reconocimiento](#reconocimiento).
+    * [Reconocimiento de Puertos](#recon-nmap).
+2. [Enumeración](#enumeración).
+    * [Enumeración Web](#enum-web).
+3. [Explotación](#detect-shellshock).   
+    * [Metasploit](#metasploit).
+ 5. [Escalada de Privilegios](#privesc). 
+    * [kitrap0d](#kitrap0d).   
+
+
+...
+
+# Reconocimiento [#](reconocimiento) {#reconocimiento}
+
+----
+
+## Reconocimiento de Puertos [📌](#recon-nmap) {#recon-nmap}
 
 Como de costumbre comienzo lanzando la utilidad Whichsystem para averiguar ante que sistema operativo me enfrento.
 
@@ -47,7 +68,11 @@ Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 
 >`Servidor Web IIS httpd 6.0`
 
-# Enumeración Web
+# Enumeración [#](enumeración) {#enumeración}
+
+----
+
+## Enumeración Web [📌](#enum-web) {#enum-web}
 
 Sabemos que se ejecuta en el puerto 80 el servuidor web IIS httpd 6.0, asique voy a abrir el navegador para ver que tenemos.
 
@@ -63,7 +88,11 @@ Hay una vulnerabilidad que me interesa.
 
 Tenemos un exploit en python o podemos explotarla a través de metasploit.
 
-# Explotación
+# Explotación [#](explotacion) {#explotacion}
+
+----
+
+## Metasploit [🔥](#metasploit) {#metasploit}
 
 En mi caso esta vez voy a usar metasploit.
 
@@ -88,7 +117,9 @@ Ahora soy ese usuario, de forma que intentaré leer la flag de usuario.
 
 Al acceder al directorio de Usuario del propio usuario Harry me da error, acceso denegado, asique debemos escalar privilegios.
 
-# Escalada de Privilegios
+# Escalada de Privilegios[#](privesc) {#privesc}
+
+## kitrap0d [👨‍💻](kitrap0d) {kitrap0d}
 
 En este caso podría probar a usar SharpHound pero voy a lanzar desde metasploit el exploit-suggester para buscar algun exploit que pueda usar para escalar privilegios aprovechándome de alguna vulnerabilidad existente.
 
