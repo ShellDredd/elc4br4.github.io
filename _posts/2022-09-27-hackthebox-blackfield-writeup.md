@@ -84,7 +84,7 @@ Host script results:
 A continuación procedo a emumerar el AD.
 
 
-# Explotación [#](explotacion) {#explotacion}
+# Explotación [#](explotacion) {#explotación}
 
 A través de rpcclient usando una null session intento enumerar usuarios.
 
