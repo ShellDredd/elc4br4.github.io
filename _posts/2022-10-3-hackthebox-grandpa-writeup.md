@@ -22,7 +22,7 @@ tags        : [ Windows ]
     * [Reconocimiento de Puertos](#recon-nmap).
 2. [Enumeración](#enumeración).
     * [Enumeración Web](#enum-web).
-3. [Explotación](#detect-shellshock).   
+3. [Explotación](#explotacion).   
     * [Metasploit](#metasploit).
  5. [Escalada de Privilegios](#privesc). 
     * [kitrap0d](#kitrap0d).   
@@ -119,7 +119,9 @@ Al acceder al directorio de Usuario del propio usuario Harry me da error, acceso
 
 # Escalada de Privilegios[#](privesc) {#privesc}
 
-## kitrap0d [👨‍💻](kitrap0d) {kitrap0d}
+----
+
+## kitrap0d [👽](kitrap0d) {#kitrap0d}
 
 En este caso podría probar a usar SharpHound pero voy a lanzar desde metasploit el exploit-suggester para buscar algun exploit que pueda usar para escalar privilegios aprovechándome de alguna vulnerabilidad existente.
 
