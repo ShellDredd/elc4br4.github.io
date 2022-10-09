@@ -173,7 +173,7 @@ Una vez hecho, me conecto por ssh.
 Y ya podemos leer la flag user.txt
 
 
-# Escalada de Privilegios[#](privesc) {#privesc}
+# Escalada de Privilegios [#](privesc) {#privesc}
 
 ----
 

@@ -189,7 +189,7 @@ Una vez dentro ya podemos leer la flag `user.txt`
 
 Y ahora toca `escalar privilegios`.
 
-# Escalada de Privilegios[#](privesc) {#privesc}
+# Escalada de Privilegios [#](privesc) {#privesc}
 
 ----
 

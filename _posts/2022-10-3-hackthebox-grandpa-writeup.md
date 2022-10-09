@@ -117,7 +117,7 @@ Ahora soy ese usuario, de forma que intentaré leer la flag de usuario.
 
 Al acceder al directorio de Usuario del propio usuario Harry me da error, acceso denegado, asique debemos escalar privilegios.
 
-# Escalada de Privilegios[#](privesc) {#privesc}
+# Escalada de Privilegios [#](privesc) {#privesc}
 
 ----
 

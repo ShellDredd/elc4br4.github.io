@@ -112,7 +112,7 @@ Una vez nos logueamos podemos leer la flag user.txt
 
 ![](/assets/images/HTB/Poison-HackTheBox/user.webp)
 
-# Escalada de Privilegios[#](privesc) {#privesc}
+# Escalada de Privilegios [#](privesc) {#privesc}
 
 ----
 
