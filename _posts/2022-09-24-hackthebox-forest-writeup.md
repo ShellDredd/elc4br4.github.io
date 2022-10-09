@@ -161,7 +161,7 @@ Y encuentro varios usuarios...
 
 Me copio estos usuarios en un archivo de texto para posteriormente intentar sacar sus hashes.
 
-# ASREPRoast [#](asreproast {#asreproast}
+# ASREPRoast [#](asreproast) {#asreproast}
 
 
 Como tenemos el puerto 88 abierto (Kerberos), intentaré atacarlo con los usuarios que hemos recolectado anteriormente.
