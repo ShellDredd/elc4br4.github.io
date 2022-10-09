@@ -13,7 +13,28 @@ Estamos ante una máquina Linux de nivel MEDIUM en la que explotaremos la vulner
 
 ![](/assets/images/HTB/DevOops-HackTheBox/DevOops-rating.webp)
 
-# Reconocimiento de Puertos
+...
+
+
+**Un pequeño INDICE**
+
+1. [Reconocimiento](#reconocimiento).
+    * [Reconocimiento de Puertos](#recon-nmap).
+2. [Enumeración](#enumeración).
+    * [Enumeración Web](#enum-web).
+3. [Explotación](#explotacion).   
+    * [Burpsuite](#burpsuite).
+ 5. [Escalada de Privilegios](#privesc). 
+    * [Git](#git).   
+
+
+...
+
+# Reconocimiento [#](reconocimiento) {#reconocimiento}
+
+----
+
+## Reconocimiento de Puertos [📌](#recon-nmap) {#recon-nmap}
 
 Para comenzar lanzo la herramienta WhichSystem para identificar ante que sistema operativo nos enfrentamos.
 
@@ -45,7 +66,11 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Ahora ya tenemos algo más de información, asique procedo a enumerar el servidor web.
 
-# Enumeración Web
+# Enumeración [#](enumeración) {#enumeración}
+
+----
+
+## Enumeración Web [📌](#enum-web) {#enum-web}
 
 Accedo desde el navegador al servidor web.
 
@@ -68,7 +93,11 @@ Pero en la ruta upload hay un panel de subida de archivos
 
 ![](/assets/images/HTB/DevOops-HackTheBox/web2.webp)
 
-# Explotación
+# Explotación [#](explotacion) {#explotacion}
+
+----
+
+## Burpsuite [🔥](#burpsuite) {#burpsuite}
 
 Pruebo a subir una reverse shell en php y capturar la petición con Burpsuite.
 
@@ -144,7 +173,11 @@ Una vez hecho, me conecto por ssh.
 Y ya podemos leer la flag user.txt
 
 
-# Escalada de Privilegios
+# Escalada de Privilegios[#](privesc) {#privesc}
+
+----
+
+## Git[👽](git) {#git}
 
 Ahora toca escalar privilegios para leer la flag root, pero para eso debemos convertirnos en el usuario root.
 
