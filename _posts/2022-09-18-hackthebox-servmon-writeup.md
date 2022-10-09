@@ -14,7 +14,30 @@ Tocaremos un poco de FTP (que nos dará pistas), explotaremos una vulnerabilidad
 
 [![HTBadge](https://www.hackthebox.eu/badge/image/533771)](https://www.hackthebox.com/home/users/profile/533771)
 
-# Reconocimiento de Puertos
+...
+
+
+**Un pequeño INDICE**
+
+1. [Reconocimiento](#reconocimiento).
+    * [Reconocimiento de Puertos](#recon-nmap).
+2. [FTP](#ftp).
+3. [SMB](#smb).
+4. [Enumeración](#enumeración).
+    * [Puerto 80](#enum-web80).
+    * [Puerto 8443](##enum-web8443).
+5. [Escalada de Privilegios](#privesc). 
+    * [NSClient++](#nclient).      
+
+
+...
+
+# Reconocimiento [#](reconocimiento) {#reconocimiento}
+
+----
+
+## Reconocimiento de Puertos [📌](#recon-nmap) {#recon-nmap}
+
 ```nmap
 PORT      STATE SERVICE
 21/tcp    open  ftp
@@ -178,7 +201,7 @@ Como de costumbre extraeré la información más importante del escaneo.
 
 Iremos por partes, comenzando por enumerar el servidor FTP.
 
-# FTP
+# FTP [#](ftp) {#ftp}
 
 Una vez nos conectamos usando las credenciales anonymous:anonymous encontramos dos usuarios
 
@@ -213,7 +236,7 @@ Y en el archivo "Notes to do.txt":
 
 Es una lista de cosas que se deben hacer.
 
-# SMB 
+# SMB [#](smb) {#smb}
 
 Continuo enumerando el servidor SMB ya que hemos terminado de enumerar el FTP.
 
@@ -232,7 +255,11 @@ Como vemos en el SMB no hay nada tampoco...
 Asique ahora procedo a enumerar los servidores web, comenzando por el puerto 80.
 
 
-# Enumeración Web (Puerto 80)
+# Enumeración [#](enumeración) {#enumeración}
+
+----
+
+## Puerto 80 [📌](#enum-web80) {#enum-web80}
 
 Como vemos tenemos un servidor web con el nombre NVMS-1000 con un panel de login.
 
@@ -256,7 +283,7 @@ Aprovechando que existe un directory Transversal voy a intentar leer las credenc
 
 Tenemos unas credenciales que podríamos usar para conectarnos la máquina, pero antes de nada enumeraré el otro servidor para no dejarme nada sin ver.
  
-# Enumeración Web (Puerto 8443)
+## Puerto 8443 [📌](#enum-web8443) {#enum-web8443}
 
 Intento acceder para ver el contenido del servidor pero no funciona... 
 
@@ -281,7 +308,11 @@ SMB         10.10.10.184    445    SERVMON          [+] ServMon\nadine:L1k3B1gBu
 
 Uso las credenciales para conectarme por ssh y obtengo la flag user.txt
 
-# Escalada de Privilegios
+# Escalada de Privilegios [#](privesc) {#privesc}
+
+----
+
+## NSClient++[👽](nsclient) {#nsclient}
 
 Para escalar recordemos que tenemos una vulnerabilidad en el servidor NSClient++
 
