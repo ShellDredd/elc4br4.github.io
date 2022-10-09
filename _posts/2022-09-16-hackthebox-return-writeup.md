@@ -13,7 +13,27 @@ Esta vez tenemos una máquina Windows de nivel Easy en la que explotaremos un se
 
 [![HTBadge](https://www.hackthebox.eu/badge/image/533771)](https://www.hackthebox.com/home/users/profile/533771)
 
-# Reconocimiento de Puertos
+...
+
+
+**Un pequeño INDICE**
+
+1. [Reconocimiento](#reconocimiento).
+    * [Reconocimiento de Puertos](#recon-nmap).
+2. [SMB](#smb).
+3. [Enumeración](#enumeración).
+ * [Enumeración Web](#enum-web).
+4. [Escalada de Privilegios](#privesc). 
+    * [Server Operators](#server-operators).      
+
+
+...
+
+# Reconocimiento [#](reconocimiento) {#reconocimiento}
+
+----
+
+## Reconocimiento de Puertos [📌](#recon-nmap) {#recon-nmap}
 
 ```nmap
 PORT      STATE SERVICE          REASON
@@ -37,7 +57,7 @@ Como podemos ver tenemos un listado de puertos bastante amplio, pero esa informa
 
 Lo más relevante es que tenemos el protocolo SMB, HTTP y en el puerto 5985 el servicio de Administración Remota (WinRM)
 
-# SMB
+# SMB [#](smb) {#smb}
 
 Comenzaré por enumerar un poco más el protocolo SMB.
 
@@ -63,7 +83,11 @@ Ahora vamos a ver si tenemos algún recurso compartido pero claro, no tenemos cr
 
 Por lo tanto hasta que no tengamos credenciales no hay mucho que hacer. Asique paso a enumerar el seevidor web.
 
-# Enumeración Web
+# Enumeración [#](enumeración) {#enumeración}
+
+----
+
+## Enumeración Web [📌](#enum-web) {#enum-web}
 
 Al acceder a la ip desde el navegador encontramos lo siguiente:
 
@@ -87,8 +111,7 @@ Clickamos en update y en la sesión de netcat recibimos unas credenciales
 
 ![](/assets/images/HTB/Return-HackTheBox/netcat.png)
 
-
-# Evil-Winrm
+# Evil Winrm [#](evil-winrm) {#evil-winrm}
 
 Ahora que tenemos credenciales podríamos probar a conectarnos a través de WinRm...
 
@@ -101,7 +124,11 @@ Y conseguimos conectarnos
 
 Ahora toca escalar privilegios
 
-# Escalada de Privilegios
+# Escalada de Privilegios [#](privesc) {#privesc}
+
+----
+
+## Server Operators[👽](server-operators) {#server-operators}
 
 Para escalar primero debemos enumerar, comenzando por los permisos del usuario actual svc-printer
 
