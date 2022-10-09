@@ -13,13 +13,31 @@ tags        : [ Linux ]
 
 ![](/assets/images/HTB/Shocker-HackTheBox/shocker-rating.webp)
 
-# Reconocimiento de Puertos
+---
+**Un pequeño INDIC**
+
+1. [Reconocimiento](#reconocimiento)
+    * [Reconocimiento de Puertos](#reconocimiento--reconocimiento)
+2. [Enumeración](#Enumeración) 
+    * [Enumeración Web](#enumeración--enumeración)
+3. [Detección ShellShock](#detección-shellshock)    
+    * [Metasploit](#metasploit-metasploit-metasploit)
+    * [Nmap](#nmap-nmap-nmap)
+4. [Explotación ShellShock](#Explotación-ShellShock)    
+    * [Burpsuite](#burpsuite-burpsuite-burpsuite)
+ 5. [Escalada de Privilegios](#escalada-de-privilegios) 
+    * [Perl](#perl-perl-perl)    
+
+
+# Reconocimiento [#](Reconocimiento) {#Reconocimiento}
+
+## Reconocimiento de Puertos [📌](#Reconocimiento de Puertos) {#Reconocimiento de Puertos}
 
 Como siempre comenzamos lanzando la utilidad Whichsystem para saber ante que sistema operativo nos enfrentamos.
 
 ![](/assets/images/HTB/Shocker-HackTheBox/whichsystem.webp)
 
-Una vez que sabemos que estamos ante una máquina Linux ya comienzo a escanear puertos y servicios.
+Una vez que sabemos que estamos ante una máquina `Linux` ya comienzo a escanear puertos y servicios.
 
 ![](/assets/images/HTB/Shocker-HackTheBox/rustscan.webp)
 
@@ -44,10 +62,16 @@ PORT     STATE SERVICE REASON  VERSION
 |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC/RjKhT/2YPlCgFQLx+gOXhC6W3A3raTzjlXQMT8Msk
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
+| Puerto | Servicio | Versión |
+| :----- | :------- | :------ |
+| 2222   | SSH      | OpenSSH 7.2p2 |
+| 80     | HTTP     | Apache 2.4.18 |
 
-Tenemos el servicio ssh corriendo en el puerto 2222 y el servicio http en el 80 en el que hay alojado un servidor web `Apache httpd 2.4.18`
+De momento no veo nada relevante, asique habría que empezar a darle caña al puerto 80 enumerando el servidor web.
 
-# Enumeración Web
+# Enumeración [#](Enumeración) {#Enumeración}
+
+## Enumeración Web [📌](#Enumeración Web) {#Enumeración Web}
 
 Abro el navegador para ver que tenemos en el servidor web.
 
@@ -57,17 +81,17 @@ Al acceder a la ip vemos lo siguiente:
 
 Inspecciono el código fuente pero no hay nada que pueda servirme.
 
-Antes de proceder a fuzzear rutas decido lanzar la herramienta nikto para escanear vulnerabilidades y sacar info más detallada del servidor web.
+Antes de proceder a fuzzear rutas decido lanzar la herramienta `nikto` para escanear vulnerabilidades y sacar info más detallada del servidor web.
 
 ![](/assets/images/HTB/Shocker-HackTheBox/nikto.webp)
 
-Pero nikto no me arroja ninguna información valiosa.
+Pero `nikto` no me arroja ninguna información valiosa.
 
-Llegados a este punto procedo a fuzzear rutas en el servidor.
+Llegados a este punto procedo a `fuzzear rutas` en el servidor.
 
 ![](/assets/images/HTB/Shocker-HackTheBox/feroxbuster.webp)
 
-Encontramos la ruta cgi-bin... que me hace pensar que este servidor podría ser vulnerable a shellshock, pero antes hay que comprobarlo.
+Encontramos la ruta `cgi-bin`... que me hace pensar que este servidor podría ser vulnerable a `shellshock`, pero antes hay que comprobarlo.
 
 Buscando información al respecto encuentro esto.
 
@@ -77,15 +101,17 @@ Buscando información al respecto encuentro esto.
 
 Nos dice que bash se puede usar para ejecutar comandos que le pasan las aplicaciones.
 
-Por lo tanto podría buscar algún archivo con extensión .sh dentro de la ruta cgi-bin.
+Por lo tanto podría buscar algún archivo con extensión `.sh dentro de la ruta cgi-bin`.
 
 Asique procedo a fuzzear pero probando varias extensiones por si acaso, ya que bash no es la única extensión que podemos encontrar.
 
 ![](/assets/images/HTB/Shocker-HackTheBox/feroxbuster1.webp)
 
-Encontramos el archivo user.sh por lo tanto ya podríamos comprobar si es vulnerable, para comprobarlo existen varias formas, pero yo solo mostraré dos de ellas, una a través de nmap y otra a través de metasploit.
+Encontramos el archivo `user.sh` por lo tanto ya podríamos comprobar si es vulnerable, para comprobarlo existen varias formas, pero yo solo mostraré dos de ellas, una a través de metasploit y otra a través de nmap.
 
-# Detección ShellShock a través de Metasploit
+# Detección ShellShock [👿](Detección ShellShock) {#Detección ShellShock}
+
+## Metasploit (#Metasploit) {#Metasploit}
 
 Abrimos metasploit y usamos el módulo auxiliar: 
 
@@ -103,11 +129,11 @@ Y lo ejecutamos
 
 ![](/assets/images/HTB/Shocker-HackTheBox/metasploit.webp)
 
-Y como vemos, es vulnerable a shellshock.
+Y como vemos, es `vulnerable a ShellShock`.
 
-# Detección ShellShock a través de nmap
+## Nmap (#Nmap) {#Nmap}
 
-Para detectar si es vulnerable a través de nmap, usaremos un script que ya trae el propio nmap.
+Para detectar si es vulnerable a través de nmap, usaremos un `script` que ya trae el propio nmap.
 
 ![](/assets/images/HTB/Shocker-HackTheBox/shellshock.webp)
 
@@ -115,27 +141,29 @@ Para detectar si es vulnerable a través de nmap, usaremos un script que ya trae
 
 Y a través de este comando comprobamos si es vulnerable o no.
 
-`nmap -p 80 10.10.10.56 --script=/usr/share/nmap/scripts/http-shellshock.nse --script-args uri=/cgi-bin/user.sh`
+**`nmap -p 80 10.10.10.56 --script=/usr/share/nmap/scripts/http-shellshock.nse --script-args uri=/cgi-bin/user.sh`**
 
 ![](/assets/images/HTB/Shocker-HackTheBox/nmap.webp)
 
-Y como vemos es Vulnerable a Shellshock.
+Y como vemos es `Vulnerable a ShellShock`.
 
-# Explotación Shellshock
+# Explotación ShellShock [👿](Explotación ShellShock) {#Explotación ShellShock}
+
+## Burpsuite (#Burpsuite) {#Burpsuite}
 
 Una vez hemos detectado que es vulnerable procedo a su explotación para acceder al sistema.
 
-En este caso, en vez de usar metasploit voy a explotarlo a través de burp.
+En este caso, en vez de usar metasploit voy a explotarlo a través de `burpsuite`.
 
-Modificando el user agent podemos introducir comandos.
+`Modificando el user agent podemos introducir comandos`.
 
-De forma que primeramente hago un ping a la ip de mi interfaz tun0 (la vpn).
+De forma que primeramente hago un ping a la ip de mi interfaz tun0 (la vpn de HTB).
 
 ![](/assets/images/HTB/Shocker-HackTheBox/burp1.webp)
 
 Como se puede ver en la imágen, el comando se ejecuta perfectamente y hace ping a la ip.
 
-A continuación intento entablar una conexión inversa con una rev shell en bash.
+A continuación intento entablar una `conexión inversa` con una `rev shell en bash`.
 
 ![](/assets/images/HTB/Shocker-HackTheBox/burp2.webp)
 
@@ -143,23 +171,25 @@ Y como vemos, hay conexión.
 
 ![](/assets/images/HTB/Shocker-HackTheBox/nc.webp)
 
-Una vez dentro ya podemos leer la flag user.txt
+Una vez dentro ya podemos leer la flag `user.txt`
 
 ![](/assets/images/HTB/Shocker-HackTheBox/user.webp)
 
-Y ahora toca escalar privilegios.
+Y ahora toca `escalar privilegios`.
 
-# Escalada de Privilegios
+# Escalada de Privilegios [👨‍💻](Escalada de Privilegios) {#Escalada de Privilegios}
 
-Como siempre comenzamos enumerando el sistema en busca de vectores de escalada.
+## Perl (#Perl) {#Perl}
+
+Como siempre comenzamos enumerando el sistema en busca de `vectores de escalada`.
 
 Yo siempre comienzo con `sudo -l` asique esta vez no va a ser menos.
 
 ![](/assets/images/HTB/Shocker-HackTheBox/sudo.webp)
 
-Podemos ejecutar como el usuario root sin contraseña el binario perl.
+Podemos ejecutar `como el usuario root sin contraseña` el binario `perl`.
 
-Y como de costumbre, nos dirigimos a la web GTFOBINS
+Y como de costumbre, nos dirigimos a la web `GTFOBINS`
 
 [https://gtfobins.github.io/gtfobins/perl/](https://gtfobins.github.io/gtfobins/perl/) 
 
@@ -169,7 +199,7 @@ Ejecutamos el comando:
 
 ![](/assets/images/HTB/Shocker-HackTheBox/root.webp)
 
-Y ya somos root y podemos leer la flag root.txt
+Y ya somos root y podemos leer la flag `root.txt`
 
 ![](/assets/images/HTB/Shocker-HackTheBox/root2.webp)
 
