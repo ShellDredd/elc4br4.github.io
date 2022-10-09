@@ -16,21 +16,23 @@ tags        : [ Linux ]
 ---
 **Un pequeño INDIC**
 
-1. [Reconocimiento](#reconocimiento)
-    * [Reconocimiento de Puertos](#recon-nmap)
-2. [Enumeración](#enumeración) 
-    * [Enumeración Web](#enum-web)
-3. [Detección ShellShock](#detect-shellshock)    
-    * [Metasploit](#metasploit)
-    * [Nmap](#nmap)
-4. [Explotación ShellShock](#explotacion)    
-    * [Burpsuite](#burpsuite))
- 5. [Escalada de Privilegios](#privesc) 
-    * [Perl](#perl)    
+1. [Reconocimiento](#reconocimiento).
+    * [Reconocimiento de Puertos](#recon-nmap).
+2. [Enumeración](#enumeración).
+    * [Enumeración Web](#enum-web).
+3. [Detección ShellShock](#detect-shellshock).   
+    * [Metasploit](#metasploit).
+    * [Nmap](#nmap).
+4. [Explotación ShellShock](#explotacion).    
+    * [Burpsuite](#burpsuite).
+ 5. [Escalada de Privilegios](#privesc). 
+    * [Perl](#perl).   
 
 ---
 
 # Reconocimiento [#](reconocimiento) {#reconocimiento}
+
+----
 
 ## Reconocimiento de Puertos [📌](#recon-nmap) {#recon-nmap}
 
@@ -72,6 +74,8 @@ De momento no veo nada relevante, asique habría que empezar a darle caña al pu
 
 # Enumeración [#](enumeración) {#enumeración}
 
+----
+
 ## Enumeración Web [📌](#enum-web) {#enum-web}
 
 Abro el navegador para ver que tenemos en el servidor web.
@@ -112,7 +116,9 @@ Encontramos el archivo `user.sh` por lo tanto ya podríamos comprobar si es vuln
 
 # Detección ShellShock [👿](#detect-shellshock) {#detect-shellshock}
 
-## Metasploit (#metasploit) {#metasploit}
+----
+
+## Metasploit [👿](#metasploit) {#metasploit}
 
 Abrimos metasploit y usamos el módulo auxiliar: 
 
@@ -150,6 +156,8 @@ Y como vemos es `Vulnerable a ShellShock`.
 
 # Explotación ShellShock [👿](explotacion) {#explotacion}
 
+----
+
 ## Burpsuite (#burpsuite) {#burpsuite}
 
 Una vez hemos detectado que es vulnerable procedo a su explotación para acceder al sistema.
@@ -179,6 +187,8 @@ Una vez dentro ya podemos leer la flag `user.txt`
 Y ahora toca `escalar privilegios`.
 
 # Escalada de Privilegios [👨‍💻](privesc) {#privesc}
+
+----
 
 ## Perl (#perl) {#perl}
 
