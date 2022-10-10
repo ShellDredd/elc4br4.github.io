@@ -18,23 +18,23 @@ Estamos ante una máquina Windows de nivel MEDIO bastante compleja, tendremos qu
 
 
 **Un pequeño INDICE**
-
-1. [Reconocimiento](#reconocimiento).
+<ol>
+<li> [Reconocimiento](#reconocimiento).
     * [Reconocimiento de Puertos](#recon-nmap).
-2. [Enumeración](#enumeración).
+<li> [Enumeración](#enumeración).
     * [Enumeración SMB](#enum-smb).
-3. [Kerberos](#kerberos).
+<li> [Kerberos](#kerberos).
     * [Enumeración Usuarios](#enum-usuarios).
     * [Fuerza Bruta Usuarios](#brute-users).
-4. [Silver Ticket](#silver).
-5. [SQL](#sql).
+<li> [Silver Ticket](#silver).
+<li> [SQL](#sql).
     * [Reverse Shell](#rev-shell).
-6. [Escalada de Privilegios Horizontal - Usuario miscsvc](#privesc).
-7. [ipforwarding](#ipforwarding).
-8. [Escalada de Privilegios Vertical - Usuario Administrador](#privesc2).
+<li> [Escalada de Privilegios Horizontal - Usuario miscsvc](#privesc).
+<li> [ipforwarding](#ipforwarding).
+<li> [Escalada de Privilegios Vertical - Usuario Administrador](#privesc2).
     * [ScrambleClient.exe](#scrambled)
 
-
+</ol>
 ***
 
 
