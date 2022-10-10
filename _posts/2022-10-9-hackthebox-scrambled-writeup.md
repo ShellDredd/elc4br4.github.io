@@ -413,7 +413,7 @@ Como podemos ver nos ejecuta el comando y nos devuelve la salida al mismo, asiqu
 
 ## Reverse Shell  [🔄](#rev-shell) {#rev-shell}
 
-1. Lo primero será subir el netcat a la máquina vícitma.
+> Lo primero será subir el netcat a la máquina vícitma.
 
 Abro un servidor python3 en mi máquina.
 
@@ -425,9 +425,9 @@ Y desde el servidor sql ejecuto el siguiente comandopara descargar el netcat.
 
 ![](/assets/images/HTB/Scrambled-HackTheBox/sql4.webp)
 
-2. A continuación pongo un oyente de netcat en escucha en el puerto 443.
+> A continuación pongo un oyente de netcat en escucha en el puerto 443.
 
-3. Y lanzo el siguiente comando para eejcutar la rev shell desde el servidor sql usando el nc.exe 
+> Y lanzo el siguiente comando para eejcutar la rev shell desde el servidor sql usando el nc.exe 
 
 En mi máquina atacante:
 
