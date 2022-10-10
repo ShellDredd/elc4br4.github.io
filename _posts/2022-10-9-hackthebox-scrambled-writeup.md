@@ -614,7 +614,7 @@ Y ya podemos leer la flag root.txt
 
 ![](/assets/images/HTB/Scrambled-HackTheBox/pwned.webp)
 
-
+Hola <span style="color:red">GRACIAS</span>.
 
 
 
