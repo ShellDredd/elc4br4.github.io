@@ -13,6 +13,7 @@ Estamos ante una máquina Windows de nivel MEDIO bastante compleja, tendremos qu
 
 ![](/assets/images/HTB/Scrambled-HackTheBox/scrambled-rating.webp)
 
+<center>
 ***
 
 
@@ -35,6 +36,7 @@ Estamos ante una máquina Windows de nivel MEDIO bastante compleja, tendremos qu
 
 
 ***
+</center>
 
 # Reconocimiento [#](reconocimiento) {#reconocimiento}
 
