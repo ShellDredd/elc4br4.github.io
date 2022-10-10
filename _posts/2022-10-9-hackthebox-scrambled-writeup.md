@@ -41,7 +41,7 @@ Estamos ante una máquina Windows de nivel MEDIO bastante compleja, tendremos qu
 
 ----
 
-## Reconocimiento de Puertos [📌](#recon-nmap) {#recon-nmap}
+## Reconocimiento de Puertos [🔍](#recon-nmap) {#recon-nmap}
 
 Como de cosumbre antes de comenzar a escanear los puertos de la máquina lanzo la utilidad WhichSystem.py para detectar el sistema operativo de la máquina víctima.
 
@@ -206,7 +206,7 @@ Lo añadimos al etc/hosts.
 
 ----
 
-## Enumeración SMB [📌](#enum-smb) {#enum-smb}
+## Enumeración SMB [🔢](#enum-smb) {#enum-smb}
 
 Para comenzar lanzo crackmapexec para enumerar un poco el SMB y saber a que me enfrento.
 
@@ -237,7 +237,7 @@ A continuación, ya que no puedo enumerar smb ni tengo ningún hilo del que tira
 
 ----
 
-## Enumeración Usuarios [📌](#enum-usuarios) {#enum-usuarios}
+## Enumeración Usuarios [🕵️‍♂️](#enum-usuarios) {#enum-usuarios}
 
 Con la herramienta kerbrute puedo tratar de buscar usuarios válidos usando una lista de palabras.
 
@@ -251,24 +251,32 @@ A través de kerbrute enumeramos usuarios.
 
 ❯ ./kerbrute userenum -d scrm.local --dc 10.10.11.168 /opt/kerberos_enum_userlists/A-ZSurnames.txt
 
-EXPLICAR COMANDO
+| Parámetro | Descripción| 
+| :-------- | :------- | 
+|-d         | Dominio  |        
+| -dc-ip    | ip del dc|   
+|/opt/kerberos_enum_userlists/A-ZSurnames.txt | ruta del diccionario de usuarios |
 
-Obtenemos varios usuarios, por lo tanto teniendo usuarios podríamos desplegar el ataque ASREPRoast para intentar conseguir el hash NTLM de alguno de los usuarios, asique me copio los usuarios en un archivo de texto antes de proceder al ataque ASREPRoast
+Obtenemos varios usuarios, por lo tanto teniendo usuarios podríamos desplegar el ataque ASREPRoast para intentar conseguir el hash NTLM de alguno de los usuarios, asique me copio los usuarios en un archivo de texto antes de proceder al ataque ASREPRoast.
 
 ![](/assets/images/HTB/Scrambled-HackTheBox/users.webp)
 
 Y lanzamos el ataque ASREPRoast con la utilidad GETNPUsers.py de la suite Impacket.
 
 ![](/assets/images/HTB/Scrambled-HackTheBox/ASREPRoast.webp)
-❯ python3 GetNPUsers.py -usersfile /home/elc4br4/HTB/Scramble/users -dc-ip 10.10.11.168 scrm.local/
-EPLICAR COMANDO
 
+> `python3 GetNPUsers.py -usersfile /home/elc4br4/HTB/Scramble/users -dc-ip 10.10.11.168 scrm.local/`
+
+| Parámetro | Descripción| 
+| :-------- | :------- | 
+|-usersfile | Hace referencia al archivo de texto que contiene los usuarios |        
+| -dc-ip    | ip del dc |        
 
 Pero no ha habido suerte, no nos arroja ningún hash, y esto es debido a lo que vimos anteriormente de que el NTLM estaba restringido.
 
 Pero a través de kerbrute también podemos hacer fuerza bruta a las contraseñas de cada uno de los usuarios que hemos encontrado.
 
-## Fuerza Bruta Usuarios [📌](#brute-users) {#brute-users}
+## Fuerza Bruta Usuarios [🏋️‍♂️](#brute-users) {#brute-users}
 
 En este caso antes de probar con un diccionario grande como es el caso de rockyou.txt voy a probar como diccionario de contraseñas el propio archivo de usuarios, por si se estuviera reutilizando un usuario como contraseña.
 
@@ -327,7 +335,6 @@ De forma que intento loguearme a través del hash NTLM creado pero no funciona.
 
 Este error es debido a la restricción NTLM.
 
-
 # Silver Ticket [#](silver) {#silver}
 
 De forma que la única opción de loguearse es a través de Kerberos pero claro, necesitamos crear un ticket (Silver Ticket) con toda la información que tenemos al respecto.
@@ -382,7 +389,6 @@ Vemos que una de las bases de datos se llama ScrambleHR, es la más llamativa de
 
 Y encuentro el usuario miscsvc y la contraseña ScrambledEggs9900
 
-
 Peroa demás de eso, después de obtener las credenciales lanzo el comando help para ver que utilidades hay en la base de datos y encuentro algo que me alegra el día por completo!!!
 
 ![](/assets/images/HTB/Scrambled-HackTheBox/sql1.webp)
@@ -405,7 +411,7 @@ Y una vez activado probamos a ejecutar algún comando, en este caso lanzo el com
 Como podemos ver nos ejecuta el comando y nos devuelve la salida al mismo, asique voy a probar a entablar una reverse shell.
 
 
-## Reverse Shell  [📌](#rev-shell) {#rev-shell}
+## Reverse Shell  [🔄](#rev-shell) {#rev-shell}
 
 1. Lo primero será subir el netcat a la máquina vícitma.
 
@@ -485,7 +491,7 @@ Asique uso la utilidad smbclient para descargar estos dos archivos y posteriorme
 
 Pero en esta ocasión antes de nada, voy a tener que compartir la VPN de HTB con el sistema Windows para poder continuar, a través de la técnica **`IP FORWARDING`**
 
-# IP FORWARDING [#](ipforwarding) {#ipforwarding)
+# IP FORWARDING [#](ipforwarding) {#ipforwarding}
 
 ```bash
 # ip máquina atacante Linux --> 192.168.213.128 NAT
@@ -511,11 +517,11 @@ Una vez realizamos los pasos hacemos ping desde Windows a la máquina víctima 1
 
 ![](/assets/images/HTB/Scrambled-HackTheBox/ping.webp)
 
-# Escalada de Privilegios Vertical - Usuario Administrador [#](privesc2) {#privesc2)
+# Escalada de Privilegios Vertical - Usuario Administrador [#](privesc2) {#privesc2}
 
 ----
 
-## ScrambleClient.exe [📌](#scramabled) {#scrambled}
+## ScrambleClient.exe 💻](#scramabled) {#scrambled}
 
 ![](/assets/images/HTB/Scrambled-HackTheBox/smbclient.webp)
 
