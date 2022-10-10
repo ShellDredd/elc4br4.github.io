@@ -16,7 +16,6 @@ Estamos ante una máquina Windows de nivel MEDIO bastante compleja, tendremos qu
 
 ***
 
-<center>
 
 **Un pequeño INDICE**
 
@@ -34,7 +33,7 @@ Estamos ante una máquina Windows de nivel MEDIO bastante compleja, tendremos qu
 7. [ipforwarding](#ipforwarding).
 8. [Escalada de Privilegios Vertical - Usuario Administrador](#privesc2).
     * [ScrambleClient.exe](#scrambled)
-</center>
+
 
 ***
 
