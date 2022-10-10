@@ -521,7 +521,7 @@ Una vez realizamos los pasos hacemos ping desde Windows a la máquina víctima 1
 
 ----
 
-## ScrambleClient.exe 💻](#scramabled) {#scrambled}
+## ScrambleClient.exe [💻](#scramabled) {#scrambled}
 
 ![](/assets/images/HTB/Scrambled-HackTheBox/smbclient.webp)
 
