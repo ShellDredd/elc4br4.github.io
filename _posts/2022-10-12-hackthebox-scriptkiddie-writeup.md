@@ -7,7 +7,7 @@ category    : [ htb ]
 tags        : [ Linux ]
 ---
 
-Tenemos una máquina nivel EASY Linux bastante sencilla, tendremos que ganar acceso a través de un exploit que generá una apk maliciosa que podremos introducir y ejecutar en el servidor web, tendremos que realizar una escalada lateral aprovechándonos de un fallo en un srcipt a través del cual podremos inyectar comandos y finalizaremos con una escalada vertical al usuario root a través de la utilidad msfconsole.
+Tenemos una máquina nivel EASY Linux bastante sencilla, tendremos que ganar acceso a través de un exploit que genera una apk maliciosa que podremos introducir y ejecutar en el servidor web, tendremos que realizar una escalada lateral aprovechándonos de un fallo en un srcipt a través del cual podremos inyectar comandos y finalizaremos con una escalada vertical al usuario root a través de la utilidad msfconsole.
 
 ![](/assets/images/HTB/ScriptKiddie-HackTheBox/Scriptkiddie2.webp)
 
