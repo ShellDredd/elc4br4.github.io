@@ -11,6 +11,8 @@ En esta ocasión me he aventurado a resolver una máquina de nivel HARD Windows.
 
 ![](/assets/images/HTB/Blackfield-HackTheBox/Blackfield2.webp)
 
+[![HTBadge](https://www.hackthebox.eu/badge/image/533771)](https://www.hackthebox.com/home/users/profile/533771)
+
 ![](/assets/images/HTB/Blackfield-HackTheBox/blackfield-rating.webp)
 
 ...

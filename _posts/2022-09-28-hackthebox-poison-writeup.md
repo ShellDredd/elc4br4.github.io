@@ -11,6 +11,7 @@ En esta ocasión estaré resolviendo una máquina de nivel MEDIUM de HackTheBox 
 
 ![](/assets/images/HTB/Poison-HackTheBox/Poison2.png)
 
+[![HTBadge](https://www.hackthebox.eu/badge/image/533771)](https://www.hackthebox.com/home/users/profile/533771)
 
 ![](/assets/images/HTB/Poison-HackTheBox/Poison-rating.webp)
 

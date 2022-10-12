@@ -11,6 +11,8 @@ tags        : [ Linux ]
 
 ![](/assets/images/HTB/Shocker-HackTheBox/shocker2.webp)
 
+[![HTBadge](https://www.hackthebox.eu/badge/image/533771)](https://www.hackthebox.com/home/users/profile/533771)
+
 ![](/assets/images/HTB/Shocker-HackTheBox/shocker-rating.webp)
 
 ...

@@ -11,6 +11,8 @@ tags        : [ Windows ]
 
 ![](/assets/images/HTB/Grandpa-HackTheBox/Grandpa2.webp)
 
+[![HTBadge](https://www.hackthebox.eu/badge/image/533771)](https://www.hackthebox.com/home/users/profile/533771)
+
 ![](/assets/images/HTB/Grandpa-HackTheBox/Grandpa-rating.webp)
 
 ...
@@ -140,6 +142,8 @@ Usaré el siguiente:
 Lo lanzo y ya soy Administrador, puedo leer las flag user y root.
 
 Una máquina sencilla para quien comienza en el mundo CTF y de ciberseguridad.
+
+![](/assets/images/HTB/Grandpa-HackTheBox/share.webp)
 
 ![](/assets/images/HTB/Grandpa-HackTheBox/fin.gif)
 

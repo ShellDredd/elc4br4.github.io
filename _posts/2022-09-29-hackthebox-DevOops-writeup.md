@@ -11,6 +11,8 @@ Estamos ante una máquina Linux de nivel MEDIUM en la que explotaremos la vulner
 
 ![](/assets/images/HTB/DevOops-HackTheBox/DevOops2.webp)
 
+[![HTBadge](https://www.hackthebox.eu/badge/image/533771)](https://www.hackthebox.com/home/users/profile/533771)
+
 ![](/assets/images/HTB/DevOops-HackTheBox/DevOops-rating.webp)
 
 ...

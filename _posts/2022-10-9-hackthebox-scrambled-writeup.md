@@ -11,6 +11,8 @@ Estamos ante una máquina Windows de nivel MEDIO bastante compleja, tendremos qu
 
 ![](/assets/images/HTB/Scrambled-HackTheBox/scrambled2.webp)
 
+[![HTBadge](https://www.hackthebox.eu/badge/image/533771)](https://www.hackthebox.com/home/users/profile/533771)
+
 ![](/assets/images/HTB/Scrambled-HackTheBox/scrambled-rating.webp)
 
 
@@ -591,7 +593,7 @@ Una vez serializado nos ponemos en escucha en el puerto 443 (que es el que yo he
 
 En otra ventana en el cmd nos podemos en escucha en el puerto 4411 que es donde se ejecuta la herramienta e introducimos la data serializada de la siguiente forma.
 
-Debemos añadir delante de la data: <span style="color:red">UPLOAD_ORDER;<dataserializada></span>.
+Debemos añadir delante de la data: <span style="color:red">UPLOAD_ORDER;dataserializada</span>.
 
 ```cmd
 # DATA SERIALIZADA
@@ -611,7 +613,7 @@ Y ya podemos leer la flag root.txt
 
 ![](/assets/images/HTB/Scrambled-HackTheBox/root.webp)
 
-<span style="color:Green">PWNED!!!</span>
+<span style="color:Red">PWNED!!!</span>
 
 ![](/assets/images/HTB/Scrambled-HackTheBox/pwned.webp)
 
