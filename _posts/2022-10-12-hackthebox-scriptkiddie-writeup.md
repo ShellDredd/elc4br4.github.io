@@ -2,7 +2,7 @@
 layout      : post
 title       : "ScriptKiddie - HackTheBox"
 author      : elc4br4
-image       : assets/images/HTB/ScriptKiddie-HackTheBox/ScriptKiddie.webp
+image       : assets/images/HTB/ScriptKiddie-HackTheBox/Scriptkiddie.webp
 category    : [ htb ]
 tags        : [ Linux ]
 ---
