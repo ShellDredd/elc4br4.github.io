@@ -25,7 +25,7 @@ Tenemos una máquina nivel EASY Linux bastante sencilla, tendremos que ganar acc
 2. [Enumeración](#enumeración).
     * [Enumeración Web](#enum-web).
 3. [Explotación](#explotacion).
-    *[Metasploit](#metasploit).
+    * [Metasploit](#metasploit).
 4. [Escalada de Privilegios](#privesc). 
     * [Movimiento Lateral - Usuario pwn](#pwn).
     * [Escalada Vertical - Usuario root](#root).
