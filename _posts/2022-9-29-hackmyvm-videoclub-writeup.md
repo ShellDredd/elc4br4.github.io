@@ -12,6 +12,8 @@ Tendremos una enumeración un poco larga, explotaremos RCE para lograr la intrus
 
 CANAL ShellDredd --> [https://www.youtube.com/c/ShellDreddInform%C3%A1tica](https://www.youtube.com/c/ShellDreddInform%C3%A1tica)
 
+
+
 ![](/assets/images/HMV/Videoclub-HackMyVM/cartel-club.gif)
 
 # Reconocimiento de Puertos
