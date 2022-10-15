@@ -11,8 +11,6 @@ Esta vez estoy ante un challenge forense bastante chulo para quien comience en e
 
 ![](/assets/images/HTB/Export-HackTheBox/export-rating.webp)
 
-![](/assets/images/HTB/Export-HackTheBox/Export-Challenge.webp)
-
 [![HTBadge](https://www.hackthebox.eu/badge/image/533771)](https://www.hackthebox.com/home/users/profile/533771)
 
 ```text
