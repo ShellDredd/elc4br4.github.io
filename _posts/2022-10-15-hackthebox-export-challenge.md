@@ -2,7 +2,7 @@
 layout      : post
 title       : "Export Forensic Challenge - HackTheBox"
 author      : elc4br4
-image       : assets/images/HTB/ScriptKiddie-HackTheBox/Export-Challenge.webp
+image       : assets/images/HTB/Export-HackTheBox/Export-Challenge.webp
 category    : [ htb ]
 tags        : [ Forense ]
 ---
@@ -10,6 +10,8 @@ tags        : [ Forense ]
 Esta vez estoy ante un challenge forense bastante chulo para quien comience en el Análisis Forense, analizaremos un archivo .raw de una captura de memoria de un sistema Windows, listaremos procesos, analizaremos los mismos, tendremos un poco de criptografía a nivel muy básico y finalizaremos obteniendo la flag de un script powershell...
 
 ![](/assets/images/HTB/Export-HackTheBox/export-rating.webp)
+
+![](/assets/images/HTB/Export-HackTheBox/Export-Challenge.webp)
 
 [![HTBadge](https://www.hackthebox.eu/badge/image/533771)](https://www.hackthebox.com/home/users/profile/533771)
 
