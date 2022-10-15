@@ -85,7 +85,7 @@ Por lo tanto vamos a identiificar procesos ejecutados, maliciosos o no, a travé
 ```bash
 # El comando usado es el siguiente:
 -----------------------------------
-$ vol.py -f WIN-LQS146OE2S1-20201027-142607.raw --profile=Win7SP1x64 pslistç
+$ vol.py -f WIN-LQS146OE2S1-20201027-142607.raw --profile=Win7SP1x64 pslist
 ```
 
 Y volatility nos saca una lista de todos los procesos, con su PID, fecha y hora de inicio, sesión activa... etc
