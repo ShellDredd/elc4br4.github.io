@@ -26,7 +26,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Tenemos dos puertos abiertos, el 22 (ssh) y el 80 (http).
 
-#Explotación
+# Explotación
 
 Abro el navegador para ver que tenemos en el puerto 80.
 

@@ -13,6 +13,8 @@ Esta vez estoy ante un challenge forense bastante chulo para quien comience en e
 
 [![HTBadge](https://www.hackthebox.eu/badge/image/533771)](https://www.hackthebox.com/home/users/profile/533771)
 
+Writeup en Vídeo --> [https://www.youtube.com/watch?v=dB2KLvvLdsI](https://www.youtube.com/watch?v=dB2KLvvLdsI)
+
 ```text
 # CHALLENGE DESCRIPTION
 -----------------------
@@ -80,7 +82,7 @@ Sigo la metodología de análisis que me muestra la cheatsheet de SANS SIFT sobr
 
 ![](/assets/images/HTB/Export-HackTheBox/metodología.webp)
 
-Por lo tanto vamos a identiificar procesos ejecutados, maliciosos o no, a través del plugin pslist.
+Por lo tanto vamos a identificar procesos ejecutados, maliciosos o no, a través del plugin pslist.
 
 ```bash
 # El comando usado es el siguiente:
