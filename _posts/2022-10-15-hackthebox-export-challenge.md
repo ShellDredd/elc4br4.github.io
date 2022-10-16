@@ -53,8 +53,8 @@ Se puede descargar la distribución Forense SANS SIFT desde este enlace:
 
 Para comenzar a resolver el challenge necesitamos varias cosas:
 
-1. Herramienta Volatility instalada
-2. Volatility CheatSheet SANS SIFT 
+* Herramienta Volatility instalada
+* Volatility CheatSheet SANS SIFT 
 
 Una vez tenemos todo comenzamos.
 
