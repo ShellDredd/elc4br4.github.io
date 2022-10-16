@@ -88,6 +88,8 @@ Veremos que el sistema es vulnerable a smb-vuln-ms17-010 o eternalblue.
 
 Asique procedo a explotar la vulnerabilidad.
 
+![](/assets/images/HTB/Blue-HackTheBox/gif.gif)
+
 # Explotación [#](explotación) {#explotacion}
 
 ***
@@ -122,5 +124,9 @@ Como podemos ver ya me he convertido en el usuario Administrador, por lo tanto y
 
 ![](/assets/images/HTB/Blue-HackTheBox/flags.webp)
 
+![](/assets/images/HTB/Blue-HackTheBox/fin.gif)
+
 ![](/assets/images/HTB/Blue-HackTheBox/share.webp)
+
+
 
