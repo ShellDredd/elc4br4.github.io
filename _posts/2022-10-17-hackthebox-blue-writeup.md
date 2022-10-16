@@ -9,6 +9,8 @@ tags        : [ Windows ]
 
 Tenemos una máquina nivel EASY Windows, en la que explotaremos la vulnerabilidad eternalblue del protocolo SMB, de forma automatizada con metasploit y no tendremos que escalar privilegios ya el propio exploit nos dará acceso al usuario Administrador.
 
+Write en video aquí --> [https://www.youtube.com/watch?v=WhwsoEtVrGo](https://www.youtube.com/watch?v=WhwsoEtVrGo)
+
 ![](/assets/images/HTB/Blue-HackTheBox/Blue2.webp)
 
 [![HTBadge](https://www.hackthebox.eu/badge/image/533771)](https://www.hackthebox.com/home/users/profile/533771)
