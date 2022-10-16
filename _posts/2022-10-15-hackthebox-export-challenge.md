@@ -15,7 +15,7 @@ Esta vez estoy ante un challenge forense bastante chulo para quien comience en e
 
 ```text
 # CHALLENGE DESCRIPTION
-
+-----------------------
 We spotted a suspicious connection to one of our servers, and immediately took a memory dump. Can you figure out what the attackers were up to?
 ```
 
